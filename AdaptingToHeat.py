@@ -1,9 +1,9 @@
 # /// script
 # requires-python = ">=3.11"
 # dependencies = [
-#     "numpy==2.4.6",
-#     "pandas==3.0.5",
-#     "plotly==6.9.0",
+#     "numpy==2.2.2",
+#     "pandas==2.2.3",
+#     "plotly==5.24.1",
 # ]
 # ///
 
@@ -340,10 +340,9 @@ def _(days_slider, df_timeline, ftp_input, go, make_subplots, mo):
 
 
 @app.cell
-def _(chart_display, metrics_display, mo, responsive_style, title_card):
+def _(chart_display, metrics_display, mo, title_card):
     # Main Reactive UI Layout Assembly
     mo.vstack([
-        responsive_style,
         title_card,
         chart_display,
         metrics_display,
@@ -358,7 +357,7 @@ def _(mo):
     - The physiological adaptations are plotted on the left from 0% to 100%.
     - The purple line shows the performance impact in terms of reclaimed Watts on the right hand scale
     - Set your baseline FTP and move the slider to see the effect of the heat acclimation camp over time
-    - In line with Racinais's, the model assumes that, unacclimated athletes lose 16% FTP in conditions of over $36^\circ\text{C}$.
+    - In line with Racinais's, the model assumes that unacclimated athletes lose 16% FTP in conditions of over $36^\circ\text{C}$.
     - Over the full 14 days they reclaim about 87% of this loss. Full FTP is not regained.
     - The majority of the gain is acquired in the first 7 days as the cardiovascular and sweat processes adapt
     - Further improvements are conferred by the elevation of Heat Stress Proteins
