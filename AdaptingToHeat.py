@@ -35,21 +35,21 @@ def _(mo):
 def _(mo):
     mo.md(r"""
     ## Heat Training Protocol
-    The paradox of heat training is that you start by removing your greatest cooling asset: airspeed. Even at relatively low power of around 150 W, pedalling on an indoor turbo-trainer in a warm room without a fan fairly quickly induces an increase in core body temperature. Professional athletes typically follow a protocol aiming to raise core body temperature to $38.5^\circ\text{C}\text{--}39.0^\circ\text{C}$ for 60 to 90 minutes a day. With the benefit of expert supervision, the target is to maintain a safe, elevated temperature. By carefulling controlling the ambient conditions and layers of clothing, athletes do not need to expend excessive energy generating high power.<br>
+    The paradox of heat training is that you start by removing your greatest cooling asset: airspeed. Even at relatively low power of around 150 W, pedalling on an indoor turbo-trainer in a warm room without a fan fairly quickly induces an increase in core body temperature. Professional athletes typically follow a protocol aiming to raise core body temperature to $38.5^\circ\text{C}\text{--}39.0^\circ\text{C}$ for 60 to 90 minutes a day. With the benefit of expert supervision, the target is to maintain a safe, elevated temperature. By carefully controlling the ambient conditions and layers of clothing, athletes do not need to expend excessive energy generating high power.<br>
     During a 14-day heat acclimation block, physiological adaptations occur in sequence. The body prioritises fluid expansion to support cardiovascular blood flow. Then it recalibrates sweat regulation and the peripheral sweat response. The transformation is completed with cellular and metabolic reinforcement.
     ## Increased Plasma Volume (days 1 to 5)
     Repeated heat stress triggers mechanisms to retain water and reduce the loss of sodium. These include the release of aldosterone and ADH (vasopressin) to retain water and albumin to draw the water into the bloodstream. This results in a  5-7% increase in body water. Any disadvantages of higher body mass are outweighed by the benefits to thermoregulation and cardiovascular stability. Blood plasma levels rise by 4-15%, resulting in a temporary decrease in haematocrit (concentration of red blood cells). This contrasts with the effect of altitude acclimation.<br>
-    The expansion of plasma volume alleviates the conflict of demand for blood to flow both to the muscles to do work and the skin for cooling. This helps stablise blood pressure and reduce the elevation of heart rate (cardiovascular drift).
+    The expansion of plasma volume alleviates the conflict of demand for blood to flow both to the muscles to do work and the skin for cooling. This helps stabilise blood pressure and reduce the elevation of heart rate (cardiovascular drift).
     ## Recalibration of the Sweat Thermostat (days 4 to 6)
     The brain's thermostat resides in the Preoptic Anterior Hypothalamus (POAH). The threshold for the central control of the sweat response falls by 0.3°C to 0.5°C, early in acclimation. Your cooling response kicks in earlier by starting to sweat at a slightly lower temperature.
     ## Sweat Rate and Electrolyte Conservation (days 7 to 10)
     At the level of the skin, not only does the sweat response start earlier, it also becomes more sensitive, producing a greater volume of sweat. This allows the you to keep cooler in hot weather.<br>
-    The sweat glands upregulate enzymes that reabsorb sodium before the sweat leaves the skin. Typical sodium concentration of 40 to 60 mmol/L declines to 10 to 30 mmol/L in the sweat of an acclimatised athete. Maintaining the osmolarity of electolytes in the blood delays the onset of fatigue.
+    The sweat glands upregulate enzymes that reabsorb sodium before the sweat leaves the skin. Typical sodium concentration of 40 to 60 mmol/L declines to 10 to 30 mmol/L in the sweat of an acclimatised athlete. Maintaining the osmolarity of electrolytes in the blood delays the onset of fatigue.
     ## Raised Heat Stress Proteins (days 10 to 14)
-    Heat Stress Proteins (HSPs) are found in every cell of our bodies. In fact must have evolved early on, because they are present in near all living organisms, from bacteria to humans. HSPs play a vital protective role, binding to intra-celluar proteins that are at risk of unfolding and losing their function when overheated. Activation of HSPs triggers the release of Heat Stress Factor 1, which enters the nucleus with a message to produce more HSPs.<br>
+    Heat Stress Proteins (HSPs) are found in every cell of our bodies. In fact they must have evolved early on, because they are present in near all living organisms, from bacteria to humans. HSPs play a vital protective role, binding to intra-cellular proteins that are at risk of unfolding and losing their function when overheated. Activation of HSPs triggers the release of Heat Stress Factor 1, which enters the nucleus with a message to produce more HSPs.<br>
     This heat stress protection mechanism prevents disruption of ATP production in the mitochondria, allowing you to maintain high performance in hot conditions.
     ## Thermal Power
-    Heat acclimation cannot change fundamental thermodynamics. However, by expanding blood volume, lowering the cooling response, diluting sweat and reinforcing celluar response you can ride more effectively in hotter weather. This is a simulation of how these adaptations evolve over a 14 day heat acclimation camp. It is callibrated to match the results in a paper by  <a href="https://www.researchgate.net/publication/263514484_Effect_of_Heat_and_Heat_Acclimatization_on_Cycling_Time_Trial_Performance_and_Pacing"> Racinais (2015)</a> about preparing for a time trial in Doha, which hosted the UCI World Championships in 2016.
+    Heat acclimation cannot change fundamental thermodynamics. However, by expanding blood volume, lowering the cooling response, diluting sweat and reinforcing cellular response you can ride more effectively in hotter weather. This is a simulation of how these adaptations evolve over a 14 day heat acclimation camp. It is calibrated to match the results in a paper by  <a href="https://www.researchgate.net/publication/263514484_Effect_of_Heat_and_Heat_Acclimatization_on_Cycling_Time_Trial_Performance_and_Pacing"> Racinais (2015)</a> about preparing for a time trial in Doha, which hosted the UCI World Championships in 2016.
     """)
     return
 
@@ -358,9 +358,9 @@ def _(mo):
     - The physiological adaptations are plotted on the left from 0% to 100%.
     - The purple line shows the performance impact in terms of reclaimed Watts on the right hand scale
     - Set your baseline FTP and move the slider to see the effect of the heat acclimation camp over time
-    - In line with Racinais's, the model assumes that, unacclimated atheletes lose 16% FTP in conditions of over $36^\circ\text{C}$.
+    - In line with Racinais's, the model assumes that, unacclimated athletes lose 16% FTP in conditions of over $36^\circ\text{C}$.
     - Over the full 14 days they reclaim about 87% of this loss. Full FTP is not regained.
-    - The majority of the gain is acquired in the first 7 days as the cardivascular and sweat processes adapt
+    - The majority of the gain is acquired in the first 7 days as the cardiovascular and sweat processes adapt
     - Further improvements are conferred by the elevation of Heat Stress Proteins
     - On the positive side, air density falls as temperature rises. This reduces aerodynamic drag. In the Racinais paper, after 14 days, acclimated athletes were able to complete a time trial faster than in cooler conditions, in spite of producing lower power.
     """)
