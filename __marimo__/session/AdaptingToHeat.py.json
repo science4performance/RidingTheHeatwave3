@@ -1,0 +1,177 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.18.3"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "a2ed3d8e67ec018ff90b6470803c42c9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"adapting-to-a-warmer-world-the-physiological-adaptions-of-heat-acclimation\">Adapting to a Warmer World: The Physiological Adaptions of Heat Acclimation</h1>\n<blockquote cite=\"https://www.huxley.net/bnw/four.html\">\n    <span class=\"paragraph\">\n      Heat acclimation develops through frequent exposure to hot environmental conditions, which elicit responses that attenuate the negative effects of heat stress\n    <cite><a href=\"https://www.researchgate.net/publication/275954405_Adaptations_and_mechanisms_of_human_heat_acclimation_Applications_for_competitive_athletes_and_sports\">P\u00e9riad (2015)</a></cite>\n    </span>\n    </blockquote>\n<span class=\"paragraph\">Having considered the physics of thermoregulation and the body's acute responses to heat, it is natural to ask how athletes can adapt to maintain performance in hot, humid conditions. If you use a Garmin device to track your training, you might have occasionally noticed messages indicating your level of heat (or altitude) acclimation. While acclimatisation refers to longer term adaptation to changes in environmental conditions, such as moving from Scotland to the south of Spain or an elevated alpine village, <strong>acclimation</strong> describes physiological changes occurring over 10 to 14 days, typically induced by artificial exercise conditions, such as indoor heat training or an altitude camp.<br></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "f84c93c052822402fd471852ae39fdad",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"heat-training-protocol\">Heat Training Protocol</h2>\n<span class=\"paragraph\">The paradox of heat training is that you start by removing your greatest cooling asset: airspeed. Even at relatively low power of around 150 W, pedalling on an indoor turbo-trainer in a warm room without a fan fairly quickly induces an increase in core body temperature. Professional athletes typically follow a protocol aiming to raise core body temperature to <marimo-tex class=\"arithmatex\">||(38.5^\\circ\\text{C}\\text{--}39.0^\\circ\\text{C}||)</marimo-tex> for 60 to 90 minutes a day. With the benefit of expert supervision, the target is to maintain a safe, elevated temperature. By carefulling controlling the ambient conditions and layers of clothing, athletes do not need to expend excessive energy generating high power.<br>\nDuring a 14-day heat acclimation block, physiological adaptations occur in sequence. The body prioritises fluid expansion to support cardiovascular blood flow. Then it recalibrates sweat regulation and the peripheral sweat response. The transformation is completed with cellular and metabolic reinforcement.</span>\n<h2 id=\"increased-plasma-volume-days-1-to-5\">Increased Plasma Volume (days 1 to 5)</h2>\n<span class=\"paragraph\">Repeated heat stress triggers mechanisms to retain water and reduce the loss of sodium. These include the release of aldosterone and ADH (vasopressin) to retain water and albumin to draw the water into the bloodstream. This results in a  5-7% increase in body water. Any disadvantages of higher body mass are outweighed by the benefits to thermoregulation and cardiovascular stability. Blood plasma levels rise by 4-15%, resulting in a temporary decrease in haematocrit (concentration of red blood cells). This contrasts with the effect of altitude acclimation.<br>\nThe expansion of plasma volume alleviates the conflict of demand for blood to flow both to the muscles to do work and the skin for cooling. This helps stablise blood pressure and reduce the elevation of heart rate (cardiovascular drift).</span>\n<h2 id=\"recalibration-of-the-sweat-thermostat-days-4-to-6\">Recalibration of the Sweat Thermostat (days 4 to 6)</h2>\n<span class=\"paragraph\">The brain's thermostat resides in the Preoptic Anterior Hypothalamus (POAH). The threshold for the central control of the sweat response falls by 0.3\u00b0C to 0.5\u00b0C, early in acclimation. Your cooling response kicks in earlier by starting to sweat at a slightly lower temperature.</span>\n<h2 id=\"sweat-rate-and-electrolyte-conservation-days-7-to-10\">Sweat Rate and Electrolyte Conservation (days 7 to 10)</h2>\n<span class=\"paragraph\">At the level of the skin, not only does the sweat response start earlier, it also becomes more sensitive, producing a greater volume of sweat. This allows the you to keep cooler in hot weather.<br>\nThe sweat glands upregulate enzymes that reabsorb sodium before the sweat leaves the skin. Typical sodium concentration of 40 to 60 mmol/L declines to 10 to 30 mmol/L in the sweat of an acclimatised athete. Maintaining the osmolarity of electolytes in the blood delays the onset of fatigue.</span>\n<h2 id=\"raised-heat-stress-proteins-days-10-to-14\">Raised Heat Stress Proteins (days 10 to 14)</h2>\n<span class=\"paragraph\">Heat Stress Proteins (HSPs) are found in every cell of our bodies. In fact must have evolved early on, because they are present in near all living organisms, from bacteria to humans. HSPs play a vital protective role, binding to intra-celluar proteins that are at risk of unfolding and losing their function when overheated. Activation of HSPs triggers the release of Heat Stress Factor 1, which enters the nucleus with a message to produce more HSPs.<br>\nThis heat stress protection mechanism prevents disruption of ATP production in the mitochondria, allowing you to maintain high performance in hot conditions.</span>\n<h2 id=\"thermal-power\">Thermal Power</h2>\n<span class=\"paragraph\">Heat acclimation cannot change fundamental thermodynamics. However, by expanding blood volume, lowering the cooling response, diluting sweat and reinforcing celluar response you can ride more effectively in hotter weather. This is a simulation of how these adaptations evolve over a 14 day heat acclimation camp. It is callibrated to match the results in a paper by  <a href=\"https://www.researchgate.net/publication/263514484_Effect_of_Heat_and_Heat_Acclimatization_on_Cycling_Time_Trial_Performance_and_Pacing\"> Racinais (2015)</a> about preparing for a time trial in Doha, which hosted the UCI World Championships in 2016.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "0c73338db0805d9940f54e50f2279d97",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "02810d36c9ced01cdaa1884d86ed42ff",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "f497c09901e1e1017e61ac8bff5d76fe",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "913e2578fd43b7ceb57f0930b6945384",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "f4d5756568a145dcdb142985e5e8278e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "1238973735a5c3f24e3f6149b8e61248",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "d1c411b0b2b0a817001846ca245257b9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "79d8f15f2041c8eb5b4ef04e7c6a6cbc",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><style>\n/* Force Marimo horizontal stacks to wrap gracefully on narrow viewports */\ndiv[class*=\"hstack\"] {\n    flex-wrap: wrap !important;\n    gap: 0.75rem !important;\n}\n\n/* Prevent Markdown tables from causing body scroll overflow */\ntable {\n    display: block;\n    overflow-x: auto;\n    white-space: nowrap;\n    max-width: 100%;\n}\n\n/* Enlarge touch targets for range sliders on mobile screens */\ninput[type=\"range\"] {\n    padding: 8px 0;\n}\n</style></span><span class=\"markdown prose dark:prose-invert contents\"><div style=\"text-align:center;\">\n  <h1 style=\"font-size:28px; font-weight:800; margin:0;\">Heat Acclimation ROI Simulator</h1>\n  <p style=\"margin:0; font-size:18px; color:#374151;\">Physiological Adaptation &amp; Reclaimed Power Model</span>\n  <hr style=\"margin-top:0.6rem; margin-bottom:0.8rem; border:none; height:1px; background:#E5E7EB;\" />\n</div></span><marimo-ui-element object-id='BYtC-0' random-id='6f044a37-d982-f070-2501-5d56a0281b08'><marimo-plotly data-initial-value='{}' data-label='null' data-figure='{&quot;data&quot;:[{&quot;hovertemplate&quot;:&quot;Day %{x}&lt;br&gt;Plasma Volume: %{y:.1f}% max&lt;extra&gt;&lt;/extra&gt;&quot;,&quot;line&quot;:{&quot;color&quot;:&quot;#2563EB&quot;,&quot;width&quot;:2.5},&quot;name&quot;:&quot;Plasma Vol Expansion&quot;,&quot;x&quot;:{&quot;dtype&quot;:&quot;f8&quot;,&quot;bdata&quot;:&quot;AAAAAAAAAAAAAAAAAADwPwAAAAAAAABAAAAAAAAACEAAAAAAAAAQQAAAAAAAABRAAAAAAAAAGEAAAAAAAAAcQAAAAAAAACBAAAAAAAAAIkAAAAAAAAAkQAAAAAAAACZAAAAAAAAAKEAAAAAAAAAqQAAAAAAAACxA&quot;},&quot;y&quot;:{&quot;dtype&quot;:&quot;f8&quot;,&quot;bdata&quot;:&quot;AAAAAAAAAADVHoHcCidFQBdRNwSgrVBAEdoBbuEyVEC1gfca3DpWQF5ZmpfcZldAMvhXnvITWEDlPaJHz3dYQHPcac5ssVhAX6P1iqrSWECmI9I72OVYQFHX/uDo8FhAiDRKLEv3WEBf+SQU+vpYQBN4gxYa/VhA&quot;},&quot;type&quot;:&quot;scatter&quot;,&quot;xaxis&quot;:&quot;x&quot;,&quot;yaxis&quot;:&quot;y&quot;},{&quot;hovertemplate&quot;:&quot;Day %{x}&lt;br&gt;POAH Shift: %{y:.1f}% max&lt;extra&gt;&lt;/extra&gt;&quot;,&quot;line&quot;:{&quot;color&quot;:&quot;#EA580C&quot;,&quot;width&quot;:2.5},&quot;name&quot;:&quot;POAH Thermostat Reset&quot;,&quot;x&quot;:{&quot;dtype&quot;:&quot;f8&quot;,&quot;bdata&quot;:&quot;AAAAAAAAAAAAAAAAAADwPwAAAAAAAABAAAAAAAAACEAAAAAAAAAQQAAAAAAAABRAAAAAAAAAGEAAAAAAAAAcQAAAAAAAACBAAAAAAAAAIkAAAAAAAAAkQAAAAAAAACZAAAAAAAAAKEAAAAAAAAAqQAAAAAAAACxA&quot;},&quot;y&quot;:{&quot;dtype&quot;:&quot;f8&quot;,&quot;bdata&quot;:&quot;wRF+5QAVAUBxkoAGYW0TQD169fOOViVAq0dO3BrXNUDk50CTG8RDQBwYv2zkO05AFW7sSDmKU0C5UIEhLlVWQNj2l+8pyVdAcw/U+Fd3WECb9C863sRYQEVPmXqX5lhAMpVRiR31WEBBeuncV/tYQHcUHUAC/lhA&quot;},&quot;type&quot;:&quot;scatter&quot;,&quot;xaxis&quot;:&quot;x&quot;,&quot;yaxis&quot;:&quot;y&quot;},{&quot;hovertemplate&quot;:&quot;Day %{x}&lt;br&gt;Na+ Retention: %{y:.1f}% max&lt;extra&gt;&lt;/extra&gt;&quot;,&quot;line&quot;:{&quot;color&quot;:&quot;#059669&quot;,&quot;width&quot;:2.5},&quot;name&quot;:&quot;Sweat Electrolyte Retention&quot;,&quot;x&quot;:{&quot;dtype&quot;:&quot;f8&quot;,&quot;bdata&quot;:&quot;AAAAAAAAAAAAAAAAAADwPwAAAAAAAABAAAAAAAAACEAAAAAAAAAQQAAAAAAAABRAAAAAAAAAGEAAAAAAAAAcQAAAAAAAACBAAAAAAAAAIkAAAAAAAAAkQAAAAAAAACZAAAAAAAAAKEAAAAAAAAAqQAAAAAAAACxA&quot;},&quot;y&quot;:{&quot;dtype&quot;:&quot;f8&quot;,&quot;bdata&quot;:&quot;ajETooDwvT9A1L+Q4GDSP+apDSPqgeY/BaoqCQFm+z/nuwg0v28QQBeOnoHkESNA/gqSEUiWNEARrrJb0XdDQPFRTaQuiE5AQX2b+23aU0A+Lsxvw51WQEN0vwwE+VdAWVXb+2eSWECs5Lkr/NJYQCxAbx+f7VhA&quot;},&quot;type&quot;:&quot;scatter&quot;,&quot;xaxis&quot;:&quot;x&quot;,&quot;yaxis&quot;:&quot;y&quot;},{&quot;hovertemplate&quot;:&quot;Day %{x}&lt;br&gt;HSP Response: %{y:.1f}% max&lt;extra&gt;&lt;/extra&gt;&quot;,&quot;line&quot;:{&quot;color&quot;:&quot;#DC2626&quot;,&quot;width&quot;:2.5},&quot;name&quot;:&quot;Cellular HSP Defense&quot;,&quot;x&quot;:{&quot;dtype&quot;:&quot;f8&quot;,&quot;bdata&quot;:&quot;AAAAAAAAAAAAAAAAAADwPwAAAAAAAABAAAAAAAAACEAAAAAAAAAQQAAAAAAAABRAAAAAAAAAGEAAAAAAAAAcQAAAAAAAACBAAAAAAAAAIkAAAAAAAAAkQAAAAAAAACZAAAAAAAAAKEAAAAAAAAAqQAAAAAAAACxA&quot;},&quot;y&quot;:{&quot;dtype&quot;:&quot;f8&quot;,&quot;bdata&quot;:&quot;AL2AUWFNrD+AMROigPC9PwBop6NKps8/IH8vtFO04D8ISIJvQJTxP+BSee7DYQJA0sFQz2j4EkAWjp6B5BEjQKJlrukXPjJA3xcRPYMKQEAAAAAAAABJQBB0d2G++lBAl2aUBXpwVEA9Lsxvw51WQOTzCnN50FdA&quot;},&quot;type&quot;:&quot;scatter&quot;,&quot;xaxis&quot;:&quot;x&quot;,&quot;yaxis&quot;:&quot;y&quot;},{&quot;fill&quot;:&quot;tozeroy&quot;,&quot;fillcolor&quot;:&quot;rgba(124, 58, 237, 0.08)&quot;,&quot;hovertemplate&quot;:&quot;Day %{x}&lt;br&gt;Reclaimed Watts: %{y:.0f} W&lt;extra&gt;&lt;/extra&gt;&quot;,&quot;line&quot;:{&quot;color&quot;:&quot;#7C3AED&quot;,&quot;width&quot;:3},&quot;name&quot;:&quot;Reclaimed Watts&quot;,&quot;x&quot;:{&quot;dtype&quot;:&quot;f8&quot;,&quot;bdata&quot;:&quot;AAAAAAAAAAAAAAAAAADwPwAAAAAAAABAAAAAAAAACEAAAAAAAAAQQAAAAAAAABRAAAAAAAAAGEAAAAAAAAAcQAAAAAAAACBAAAAAAAAAIkAAAAAAAAAkQAAAAAAAACZAAAAAAAAAKEAAAAAAAAAqQAAAAAAAACxA&quot;},&quot;y&quot;:{&quot;dtype&quot;:&quot;f8&quot;,&quot;bdata&quot;:&quot;JvRM/g7azT8lSDIeYgwXQJuXksSt0yJA5jKRTEm/KEA2Y9SHsKYuQHEWoWb2RTJASe7yrTDJNEACPQx/i8E2QPKL+1GGjzhAzSu8ABCgOkBOiItsygE9QArq0/7tTD9A4HdsfzyGQEA0sJViVBJBQGwFCHFLX0FA&quot;},&quot;type&quot;:&quot;scatter&quot;,&quot;xaxis&quot;:&quot;x&quot;,&quot;yaxis&quot;:&quot;y2&quot;}],&quot;layout&quot;:{&quot;template&quot;:{&quot;data&quot;:{&quot;barpolar&quot;:[{&quot;marker&quot;:{&quot;line&quot;:{&quot;color&quot;:&quot;white&quot;,&quot;width&quot;:0.5},&quot;pattern&quot;:{&quot;fillmode&quot;:&quot;overlay&quot;,&quot;size&quot;:10,&quot;solidity&quot;:0.2}},&quot;type&quot;:&quot;barpolar&quot;}],&quot;bar&quot;:[{&quot;error_x&quot;:{&quot;color&quot;:&quot;#2a3f5f&quot;},&quot;error_y&quot;:{&quot;color&quot;:&quot;#2a3f5f&quot;},&quot;marker&quot;:{&quot;line&quot;:{&quot;color&quot;:&quot;white&quot;,&quot;width&quot;:0.5},&quot;pattern&quot;:{&quot;fillmode&quot;:&quot;overlay&quot;,&quot;size&quot;:10,&quot;solidity&quot;:0.2}},&quot;type&quot;:&quot;bar&quot;}],&quot;carpet&quot;:[{&quot;aaxis&quot;:{&quot;endlinecolor&quot;:&quot;#2a3f5f&quot;,&quot;gridcolor&quot;:&quot;#C8D4E3&quot;,&quot;linecolor&quot;:&quot;#C8D4E3&quot;,&quot;minorgridcolor&quot;:&quot;#C8D4E3&quot;,&quot;startlinecolor&quot;:&quot;#2a3f5f&quot;},&quot;baxis&quot;:{&quot;endlinecolor&quot;:&quot;#2a3f5f&quot;,&quot;gridcolor&quot;:&quot;#C8D4E3&quot;,&quot;linecolor&quot;:&quot;#C8D4E3&quot;,&quot;minorgridcolor&quot;:&quot;#C8D4E3&quot;,&quot;startlinecolor&quot;:&quot;#2a3f5f&quot;},&quot;type&quot;:&quot;carpet&quot;}],&quot;choropleth&quot;:[{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;type&quot;:&quot;choropleth&quot;}],&quot;contourcarpet&quot;:[{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;type&quot;:&quot;contourcarpet&quot;}],&quot;contour&quot;:[{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;colorscale&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]],&quot;type&quot;:&quot;contour&quot;}],&quot;heatmap&quot;:[{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;colorscale&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]],&quot;type&quot;:&quot;heatmap&quot;}],&quot;histogram2dcontour&quot;:[{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;colorscale&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]],&quot;type&quot;:&quot;histogram2dcontour&quot;}],&quot;histogram2d&quot;:[{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;colorscale&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]],&quot;type&quot;:&quot;histogram2d&quot;}],&quot;histogram&quot;:[{&quot;marker&quot;:{&quot;pattern&quot;:{&quot;fillmode&quot;:&quot;overlay&quot;,&quot;size&quot;:10,&quot;solidity&quot;:0.2}},&quot;type&quot;:&quot;histogram&quot;}],&quot;mesh3d&quot;:[{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;type&quot;:&quot;mesh3d&quot;}],&quot;parcoords&quot;:[{&quot;line&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;type&quot;:&quot;parcoords&quot;}],&quot;pie&quot;:[{&quot;automargin&quot;:true,&quot;type&quot;:&quot;pie&quot;}],&quot;scatter3d&quot;:[{&quot;line&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;type&quot;:&quot;scatter3d&quot;}],&quot;scattercarpet&quot;:[{&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;type&quot;:&quot;scattercarpet&quot;}],&quot;scattergeo&quot;:[{&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;type&quot;:&quot;scattergeo&quot;}],&quot;scattergl&quot;:[{&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;type&quot;:&quot;scattergl&quot;}],&quot;scattermapbox&quot;:[{&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;type&quot;:&quot;scattermapbox&quot;}],&quot;scattermap&quot;:[{&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;type&quot;:&quot;scattermap&quot;}],&quot;scatterpolargl&quot;:[{&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;type&quot;:&quot;scatterpolargl&quot;}],&quot;scatterpolar&quot;:[{&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;type&quot;:&quot;scatterpolar&quot;}],&quot;scatter&quot;:[{&quot;fillpattern&quot;:{&quot;fillmode&quot;:&quot;overlay&quot;,&quot;size&quot;:10,&quot;solidity&quot;:0.2},&quot;type&quot;:&quot;scatter&quot;}],&quot;scatterternary&quot;:[{&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;type&quot;:&quot;scatterternary&quot;}],&quot;surface&quot;:[{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;colorscale&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]],&quot;type&quot;:&quot;surface&quot;}],&quot;table&quot;:[{&quot;cells&quot;:{&quot;fill&quot;:{&quot;color&quot;:&quot;#EBF0F8&quot;},&quot;line&quot;:{&quot;color&quot;:&quot;white&quot;}},&quot;header&quot;:{&quot;fill&quot;:{&quot;color&quot;:&quot;#C8D4E3&quot;},&quot;line&quot;:{&quot;color&quot;:&quot;white&quot;}},&quot;type&quot;:&quot;table&quot;}]},&quot;layout&quot;:{&quot;annotationdefaults&quot;:{&quot;arrowcolor&quot;:&quot;#2a3f5f&quot;,&quot;arrowhead&quot;:0,&quot;arrowwidth&quot;:1},&quot;autotypenumbers&quot;:&quot;strict&quot;,&quot;coloraxis&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;colorscale&quot;:{&quot;diverging&quot;:[[0,&quot;#8e0152&quot;],[0.1,&quot;#c51b7d&quot;],[0.2,&quot;#de77ae&quot;],[0.3,&quot;#f1b6da&quot;],[0.4,&quot;#fde0ef&quot;],[0.5,&quot;#f7f7f7&quot;],[0.6,&quot;#e6f5d0&quot;],[0.7,&quot;#b8e186&quot;],[0.8,&quot;#7fbc41&quot;],[0.9,&quot;#4d9221&quot;],[1,&quot;#276419&quot;]],&quot;sequential&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]],&quot;sequentialminus&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]]},&quot;colorway&quot;:[&quot;#636efa&quot;,&quot;#EF553B&quot;,&quot;#00cc96&quot;,&quot;#ab63fa&quot;,&quot;#FFA15A&quot;,&quot;#19d3f3&quot;,&quot;#FF6692&quot;,&quot;#B6E880&quot;,&quot;#FF97FF&quot;,&quot;#FECB52&quot;],&quot;font&quot;:{&quot;color&quot;:&quot;#2a3f5f&quot;},&quot;geo&quot;:{&quot;bgcolor&quot;:&quot;white&quot;,&quot;lakecolor&quot;:&quot;white&quot;,&quot;landcolor&quot;:&quot;white&quot;,&quot;showlakes&quot;:true,&quot;showland&quot;:true,&quot;subunitcolor&quot;:&quot;#C8D4E3&quot;},&quot;hoverlabel&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;hovermode&quot;:&quot;closest&quot;,&quot;mapbox&quot;:{&quot;style&quot;:&quot;light&quot;},&quot;paper_bgcolor&quot;:&quot;white&quot;,&quot;plot_bgcolor&quot;:&quot;white&quot;,&quot;polar&quot;:{&quot;angularaxis&quot;:{&quot;gridcolor&quot;:&quot;#EBF0F8&quot;,&quot;linecolor&quot;:&quot;#EBF0F8&quot;,&quot;ticks&quot;:&quot;&quot;},&quot;bgcolor&quot;:&quot;white&quot;,&quot;radialaxis&quot;:{&quot;gridcolor&quot;:&quot;#EBF0F8&quot;,&quot;linecolor&quot;:&quot;#EBF0F8&quot;,&quot;ticks&quot;:&quot;&quot;}},&quot;scene&quot;:{&quot;xaxis&quot;:{&quot;backgroundcolor&quot;:&quot;white&quot;,&quot;gridcolor&quot;:&quot;#DFE8F3&quot;,&quot;gridwidth&quot;:2,&quot;linecolor&quot;:&quot;#EBF0F8&quot;,&quot;showbackground&quot;:true,&quot;ticks&quot;:&quot;&quot;,&quot;zerolinecolor&quot;:&quot;#EBF0F8&quot;},&quot;yaxis&quot;:{&quot;backgroundcolor&quot;:&quot;white&quot;,&quot;gridcolor&quot;:&quot;#DFE8F3&quot;,&quot;gridwidth&quot;:2,&quot;linecolor&quot;:&quot;#EBF0F8&quot;,&quot;showbackground&quot;:true,&quot;ticks&quot;:&quot;&quot;,&quot;zerolinecolor&quot;:&quot;#EBF0F8&quot;},&quot;zaxis&quot;:{&quot;backgroundcolor&quot;:&quot;white&quot;,&quot;gridcolor&quot;:&quot;#DFE8F3&quot;,&quot;gridwidth&quot;:2,&quot;linecolor&quot;:&quot;#EBF0F8&quot;,&quot;showbackground&quot;:true,&quot;ticks&quot;:&quot;&quot;,&quot;zerolinecolor&quot;:&quot;#EBF0F8&quot;}},&quot;shapedefaults&quot;:{&quot;line&quot;:{&quot;color&quot;:&quot;#2a3f5f&quot;}},&quot;ternary&quot;:{&quot;aaxis&quot;:{&quot;gridcolor&quot;:&quot;#DFE8F3&quot;,&quot;linecolor&quot;:&quot;#A2B1C6&quot;,&quot;ticks&quot;:&quot;&quot;},&quot;baxis&quot;:{&quot;gridcolor&quot;:&quot;#DFE8F3&quot;,&quot;linecolor&quot;:&quot;#A2B1C6&quot;,&quot;ticks&quot;:&quot;&quot;},&quot;bgcolor&quot;:&quot;white&quot;,&quot;caxis&quot;:{&quot;gridcolor&quot;:&quot;#DFE8F3&quot;,&quot;linecolor&quot;:&quot;#A2B1C6&quot;,&quot;ticks&quot;:&quot;&quot;}},&quot;title&quot;:{&quot;x&quot;:0.05},&quot;xaxis&quot;:{&quot;automargin&quot;:true,&quot;gridcolor&quot;:&quot;#EBF0F8&quot;,&quot;linecolor&quot;:&quot;#EBF0F8&quot;,&quot;ticks&quot;:&quot;&quot;,&quot;title&quot;:{&quot;standoff&quot;:15},&quot;zerolinecolor&quot;:&quot;#EBF0F8&quot;,&quot;zerolinewidth&quot;:2},&quot;yaxis&quot;:{&quot;automargin&quot;:true,&quot;gridcolor&quot;:&quot;#EBF0F8&quot;,&quot;linecolor&quot;:&quot;#EBF0F8&quot;,&quot;ticks&quot;:&quot;&quot;,&quot;title&quot;:{&quot;standoff&quot;:15},&quot;zerolinecolor&quot;:&quot;#EBF0F8&quot;,&quot;zerolinewidth&quot;:2}}},&quot;xaxis&quot;:{&quot;anchor&quot;:&quot;y&quot;,&quot;domain&quot;:[0.0,0.94],&quot;title&quot;:{&quot;font&quot;:{&quot;size&quot;:11},&quot;text&quot;:&quot;Days in Heat Camp&quot;},&quot;tickfont&quot;:{&quot;size&quot;:10},&quot;dtick&quot;:1},&quot;yaxis&quot;:{&quot;anchor&quot;:&quot;x&quot;,&quot;domain&quot;:[0.0,1.0],&quot;title&quot;:{&quot;font&quot;:{&quot;size&quot;:11},&quot;text&quot;:&quot;% Max&quot;},&quot;tickfont&quot;:{&quot;size&quot;:10},&quot;range&quot;:[-5,105]},&quot;yaxis2&quot;:{&quot;anchor&quot;:&quot;x&quot;,&quot;overlaying&quot;:&quot;y&quot;,&quot;side&quot;:&quot;right&quot;,&quot;title&quot;:{&quot;font&quot;:{&quot;size&quot;:11},&quot;text&quot;:&quot;Reclaimed Watts (W) out of 46 W lost&quot;},&quot;tickfont&quot;:{&quot;size&quot;:10,&quot;color&quot;:&quot;#1E293B&quot;},&quot;range&quot;:[0,45.60000000000002]},&quot;annotations&quot;:[{&quot;font&quot;:{&quot;size&quot;:16},&quot;showarrow&quot;:false,&quot;text&quot;:&quot;Kinetics of Physiological Adaptations (% Max)&quot;,&quot;x&quot;:0.47,&quot;xanchor&quot;:&quot;center&quot;,&quot;xref&quot;:&quot;paper&quot;,&quot;y&quot;:1.0,&quot;yanchor&quot;:&quot;bottom&quot;,&quot;yref&quot;:&quot;paper&quot;},{&quot;showarrow&quot;:false,&quot;text&quot;:&quot;Day 14&quot;,&quot;x&quot;:14,&quot;xanchor&quot;:&quot;right&quot;,&quot;xref&quot;:&quot;x&quot;,&quot;y&quot;:1,&quot;yanchor&quot;:&quot;top&quot;,&quot;yref&quot;:&quot;y domain&quot;}],&quot;shapes&quot;:[{&quot;line&quot;:{&quot;color&quot;:&quot;#1E293B&quot;,&quot;dash&quot;:&quot;dash&quot;,&quot;width&quot;:1.5},&quot;type&quot;:&quot;line&quot;,&quot;x0&quot;:14,&quot;x1&quot;:14,&quot;xref&quot;:&quot;x&quot;,&quot;y0&quot;:0,&quot;y1&quot;:1,&quot;yref&quot;:&quot;y domain&quot;}],&quot;margin&quot;:{&quot;l&quot;:12,&quot;r&quot;:12,&quot;t&quot;:35,&quot;b&quot;:80},&quot;legend&quot;:{&quot;font&quot;:{&quot;size&quot;:10},&quot;orientation&quot;:&quot;h&quot;,&quot;yanchor&quot;:&quot;top&quot;,&quot;y&quot;:-0.18,&quot;xanchor&quot;:&quot;center&quot;,&quot;x&quot;:0.5},&quot;autosize&quot;:true,&quot;height&quot;:500,&quot;hovermode&quot;:&quot;x unified&quot;}}' data-config='{&quot;responsive&quot;:true,&quot;displayModeBar&quot;:false}'></marimo-plotly></marimo-ui-element><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\"><marimo-ui-element object-id='lEQa-1' random-id='a75fa327-8577-8146-5a05-68eb17fa652a'><marimo-number data-initial-value='300' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Baseline FTP (W)&lt;/span&gt;&lt;/span&gt;&quot;' data-start='200' data-stop='400' data-step='5' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element><br>\n<marimo-ui-element object-id='lEQa-0' random-id='889ed55c-d8e5-7fac-849c-2f26eb4cc2d8'><marimo-slider data-initial-value='14' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Camp Duration (Days)&lt;/span&gt;&lt;/span&gt;&quot;' data-start='0' data-stop='14' data-step='1' data-steps='[]' data-debounce='false' data-disabled='false' data-orientation='&quot;horizontal&quot;' data-show-value='false' data-include-input='false' data-full-width='false'></marimo-slider></marimo-ui-element><br></span>\n<h3 id=\"performance-metrics-at-day-14\">\ud83d\udcc8 Performance Metrics at Day 14<br></h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Parameter</th>\n<th style=\"text-align: left;\">Value</th>\n<th style=\"text-align: left;\">Physiological Meaning</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Unacclimated FTP</strong></td>\n<td style=\"text-align: left;\"><span style=\"color:#2563eb; font-weight:bold;\">239 W</span></td>\n<td style=\"text-align: left;\">FTP reduced dure to environment</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Reclaimed Power</strong></td>\n<td style=\"text-align: left;\"><span style=\"color:#2563eb; font-weight:bold;\">+35 W</span></td>\n<td style=\"text-align: left;\">Watts recovered from environmental penalty</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Effective FTP</strong></td>\n<td style=\"text-align: left;\"><strong>274 W</strong></td>\n<td style=\"text-align: left;\">Available threshold power under race heat</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Cardiovascular Drift</strong></td>\n<td style=\"text-align: left;\"><strong>4.5 bpm/hr</strong></td>\n<td style=\"text-align: left;\">Heart rate creep rate under sustained load</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Plasma Volume</strong></td>\n<td style=\"text-align: left;\"><strong>+15.0%</strong></td>\n<td style=\"text-align: left;\">Hypervolemic fluid buffer extension</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Sweat Electrolyte Loss</strong></td>\n<td style=\"text-align: left;\"><strong>-44.9%</strong></td>\n<td style=\"text-align: left;\">Dilute sweating efficiency gain</td>\n</tr>\n</tbody>\n</table></span></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bmpa",
+      "code_hash": "678aa271f95ac97b91e0e112ba0dff77",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><ul>\n<li>The physiological adaptations are plotted on the left from 0% to 100%.</li>\n<li>The purple line shows the performance impact in terms of reclaimed Watts on the right hand scale</li>\n<li>Set your baseline FTP and move the slider to see the effect of the heat acclimation camp over time</li>\n<li>In line with Racinais's, the model assumes that, unacclimated atheletes lose 16% FTP in conditions of over <marimo-tex class=\"arithmatex\">||(36^\\circ\\text{C}||)</marimo-tex>.</li>\n<li>Over the full 14 days they reclaim about 87% of this loss. Full FTP is not regained.</li>\n<li>The majority of the gain is acquired in the first 7 days as the cardivascular and sweat processes adapt</li>\n<li>Further improvements are conferred by the elevation of Heat Stress Proteins</li>\n<li>On the positive side, air density falls as temperature rises. This reduces aerodynamic drag. In the Racinais paper, after 14 days, acclimated athletes were able to complete a time trial faster than in cooler conditions, in spite of producing lower power.</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "cd05b680fecebc626adeed5d03ff3a24",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"technical-appendix\">Technical Appendix</h2>\n<span class=\"paragraph\">For those who want to dig deeper, I recommend excellent papers by <a href=\"https://www.researchgate.net/publication/275954405_Adaptations_and_mechanisms_of_human_heat_acclimation_Applications_for_competitive_athletes_and_sports\">P\u00e9riad (2015)</a> and <a href=\"https://www.researchgate.net/publication/263514484_Effect_of_Heat_and_Heat_Acclimatization_on_Cycling_Time_Trial_Performance_and_Pacing\"> Racinais (2015)</a>.<br></span>\n<h3 id=\"physiological-adaptation\">Physiological adaptation</h3>\n<ul>\n<li>Adaptation of blood plasma expansion is modelled with a capped exponential function.</li>\n<li>The other physiological changes are modelled with sigmoid functions.</li>\n</ul>\n<h3 id=\"model-fitting-estimation-and-validation-of-watts-lost-and-watts-reclaimed-from-heat-acclimatisation\">Model fitting - Estimation and Validation of Watts lost and Watts reclaimed from Heat Acclimatisation.</h3>\n<ul>\n<li>I estimated the underlying data used to produce the chart in Figure 1 of  <a href=\"https://www.researchgate.net/publication/263514484_Effect_of_Heat_and_Heat_Acclimatization_on_Cycling_Time_Trial_Performance_and_Pacing\"> Racinais (2015)</a>.</li>\n<li>I calculated average power and confirmed that there was a 15.9% loss of power for the unacclimated test versus baseline compared with 16% quoted in the text</li>\n<li>\n<span class=\"paragraph\">I calculated average power for day 7 and day 14 in order to calibrate the Simulation in the main app. \n   Although more of the watts are regained in the first 7 days, I found that a roughly equal weighting of the physiological adaptations matched the power improvements observed in the study</span>\n<ul>\n<li>Mitigation Weightings (Contribution to total performance recovery)</li>\n<li>35% CV stability</li>\n<li>30% Thermoregulatory offset</li>\n<li>35% Cellular protection</li>\n</ul>\n</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "FTfS",
+      "code_hash": "ad08a3430ecff1aeda4a640c52a650ae",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Source code for this project at <a href=\"https://github.com/science4performance/RidingTheHeatwave3\" rel=\"noopener noreferrer\" target=\"_blank\">https://github.com/science4performance/RidingTheHeatwave3</a></span></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <!-- Preload is necessary because we show these images when we disconnect from the server,
+    but at that point we cannot load these images from the server -->
+    <link rel="preload" href="./assets/gradient-yHQUC_QB.png" as="image" />
+    <link rel="preload" href="./assets/noise-60BoTA8O.png" as="image" />
+    <!-- Preload the fonts -->
+    <link rel="preload" href="./assets/Lora-VariableFont_wght-B2ootaw-.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Regular-CxL0S8W7.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Bold-D9fedIX3.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Regular-BTCkDNvf.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Medium-DU3aDxX5.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Bold-CLVRCuM9.ttf" as="font" crossorigin="anonymous" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="a marimo app" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <script data-marimo="true">
+      function __resizeIframe(obj) {
+        const scrollbarHeight = 20; // Max between windows, mac, and linux
+
+        function setHeight() {
+          // Guard against race condition where iframe isn't ready
+          if (!obj.contentWindow?.document?.documentElement) {
+            return;
+          }
+          const element = obj.contentWindow.document.documentElement;
+          // If there is no vertical scrollbar, we don't need to resize the iframe
+          if (element.scrollHeight === element.clientHeight) {
+            return;
+          }
+
+          // Create a new height that includes the scrollbar height if it's visible
+          const hasHorizontalScrollbar = element.scrollWidth > element.clientWidth;
+          const newHeight = element.scrollHeight + (hasHorizontalScrollbar ? scrollbarHeight : 0);
+
+          // Only update the height if it's different from the current height
+          if (obj.style.height !== `${newHeight}px`) {
+            obj.style.height = `${newHeight}px`;
+          }
+        }
+
+        // Resize the iframe to the height of the content and bottom scrollbar height
+        setHeight();
+
+        // Resize the iframe when the content changes
+        const resizeObserver = new ResizeObserver((_entries) => {
+          setHeight();
+        });
+        // Only observe if iframe content is ready
+        if (obj.contentWindow?.document?.body) {
+          resizeObserver.observe(obj.contentWindow.document.body);
+        }
+      }
+    </script>
+    <marimo-filename hidden>notebook.py</marimo-filename>
+    <!-- TODO(Trevor): Legacy, required by VS Code plugin. Remove when plugin is updated (see marimo/server/_templates/template.py) -->
+    <marimo-version data-version="{{ version }}" hidden></marimo-version>
+    <marimo-user-config data-config="{{ user_config }}" hidden></marimo-user-config>
+    <marimo-server-token data-token="{{ server_token }}" hidden></marimo-server-token>
+    <!-- /TODO -->
+    <title>Science4Performance | Heat Acclimation ROI Engine</title>
+    <script type="module" crossorigin src="./assets/index-CXWNxYPw.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-WDmkW-6F.js">
+    <link rel="modulepreload" crossorigin href="./assets/chunk-LvLJmgfZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-XTZdWHwa.js">
+    <link rel="modulepreload" crossorigin href="./assets/compiler-runtime-QczY1yfQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/useEventListener-BMXqdHZ5.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-dom-BZDtXk6t.js">
+    <link rel="modulepreload" crossorigin href="./assets/jsx-runtime-B4_2-8Ho.js">
+    <link rel="modulepreload" crossorigin href="./assets/Combination-DIF6wDxT.js">
+    <link rel="modulepreload" crossorigin href="./assets/clsx-CGw3WJH5.js">
+    <link rel="modulepreload" crossorigin href="./assets/cn-f3ruLt4G.js">
+    <link rel="modulepreload" crossorigin href="./assets/menu-items-QU91GQzu.js">
+    <link rel="modulepreload" crossorigin href="./assets/hotkeys-sK-kaEBC.js">
+    <link rel="modulepreload" crossorigin href="./assets/button-BtVgadIf.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-DTKIwXcy.js">
+    <link rel="modulepreload" crossorigin href="./assets/createLucideIcon-C9QGcv--.js">
+    <link rel="modulepreload" crossorigin href="./assets/check-Pczj-rmu.js">
+    <link rel="modulepreload" crossorigin href="./assets/select-Dre1F6mo.js">
+    <link rel="modulepreload" crossorigin href="./assets/multi-map-Z_hg0zTh.js">
+    <link rel="modulepreload" crossorigin href="./assets/chevron-right-Cn1LhTdd.js">
+    <link rel="modulepreload" crossorigin href="./assets/dropdown-menu-DL4QHRL7.js">
+    <link rel="modulepreload" crossorigin href="./assets/tooltip-DEUNsdbK.js">
+    <link rel="modulepreload" crossorigin href="./assets/_Uint8Array-BGESiCQL.js">
+    <link rel="modulepreload" crossorigin href="./assets/_getTag-BWqNuuwU.js">
+    <link rel="modulepreload" crossorigin href="./assets/_baseIsEqual-C8v2yRqO.js">
+    <link rel="modulepreload" crossorigin href="./assets/jotai-D74Ef_p1.js">
+    <link rel="modulepreload" crossorigin href="./assets/invariant-EWlZS5z8.js">
+    <link rel="modulepreload" crossorigin href="./assets/isArrayLikeObject-BkJc8lDE.js">
+    <link rel="modulepreload" crossorigin href="./assets/merge-DVX6Ez37.js">
+    <link rel="modulepreload" crossorigin href="./assets/zod-BBqism5D.js">
+    <link rel="modulepreload" crossorigin href="./assets/utils-Clm_pCuX.js">
+    <link rel="modulepreload" crossorigin href="./assets/requests-CMMs4cl8.js">
+    <link rel="modulepreload" crossorigin href="./assets/once-DF3Ybce_.js">
+    <link rel="modulepreload" crossorigin href="./assets/toDate-J43JkZRd.js">
+    <link rel="modulepreload" crossorigin href="./assets/isSymbol-BGkTcW3U.js">
+    <link rel="modulepreload" crossorigin href="./assets/toString-DlRqgfqz.js">
+    <link rel="modulepreload" crossorigin href="./assets/_baseSlice-CskhCEVH.js">
+    <link rel="modulepreload" crossorigin href="./assets/_hasUnicode-BC4vb_bF.js">
+    <link rel="modulepreload" crossorigin href="./assets/useLifecycle-bYJVBwo9.js">
+    <link rel="modulepreload" crossorigin href="./assets/capitalize-HqFs_OK0.js">
+    <link rel="modulepreload" crossorigin href="./assets/ai-model-dropdown-BiaBgfSy.js">
+    <link rel="modulepreload" crossorigin href="./assets/badge-DjEl44tW.js">
+    <link rel="modulepreload" crossorigin href="./assets/use-toast-CTk3v2Fk.js">
+    <link rel="modulepreload" crossorigin href="./assets/constants-O0mPFSN0.js">
+    <link rel="modulepreload" crossorigin href="./assets/Deferred-cELqHKYi.js">
+    <link rel="modulepreload" crossorigin href="./assets/config-ljv4_QXT.js">
+    <link rel="modulepreload" crossorigin href="./assets/uuid-DFgsIVBI.js">
+    <link rel="modulepreload" crossorigin href="./assets/DeferredRequestRegistry-DUZWfqOX.js">
+    <link rel="modulepreload" crossorigin href="./assets/connection-DZfQ0nfK.js">
+    <link rel="modulepreload" crossorigin href="./assets/useNonce-BPtPhVM4.js">
+    <link rel="modulepreload" crossorigin href="./assets/capabilities-DPEuN0Kv.js">
+    <link rel="modulepreload" crossorigin href="./assets/createReducer-uDMmKGBt.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-hQAzR0Cy.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-a5AhnPua.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BWV-5FQQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BRKC9vDH.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-C2lGLtUJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-DjRxw7g7.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BFZNB01C.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CiIxDFsH.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-AYL4p4Dn.js">
+    <link rel="modulepreload" crossorigin href="./assets/stex-BQjjdb1n.js">
+    <link rel="modulepreload" crossorigin href="./assets/cjs-VdEqhsWH.js">
+    <link rel="modulepreload" crossorigin href="./assets/_arrayReduce-BPS6ICyD.js">
+    <link rel="modulepreload" crossorigin href="./assets/type-Bx7IFbhF.js">
+    <link rel="modulepreload" crossorigin href="./assets/_baseProperty-Bl8lQyHQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/toNumber-GB_lFVaq.js">
+    <link rel="modulepreload" crossorigin href="./assets/now-DBnXnRPe.js">
+    <link rel="modulepreload" crossorigin href="./assets/debounce-BzCP2SOK.js">
+    <link rel="modulepreload" crossorigin href="./assets/toInteger-Cl1doThW.js">
+    <link rel="modulepreload" crossorigin href="./assets/main-B1nOh376.js">
+    <link rel="modulepreload" crossorigin href="./assets/cells-XWXpgwpH.js">
+    <link rel="modulepreload" crossorigin href="./assets/kbd-BGS9frER.js">
+    <link rel="modulepreload" crossorigin href="./assets/renderShortcut-CF5R2n1d.js">
+    <link rel="modulepreload" crossorigin href="./assets/useEvent-bc5jSpSz.js">
+    <link rel="modulepreload" crossorigin href="./assets/useDeleteCell-D5AVSLUE.js">
+    <link rel="modulepreload" crossorigin href="./assets/lazy-ShQ0UXOI.js">
+    <link rel="modulepreload" crossorigin href="./assets/defaultLocale-9ao8Dcla.js">
+    <link rel="modulepreload" crossorigin href="./assets/precisionRound-BdwMj645.js">
+    <link rel="modulepreload" crossorigin href="./assets/defaultLocale-Bu1vZnwX.js">
+    <link rel="modulepreload" crossorigin href="./assets/vega-loader.browser-DUgPL0IU.js">
+    <link rel="modulepreload" crossorigin href="./assets/tooltip-tPIJZni7.js">
+    <link rel="modulepreload" crossorigin href="./assets/ErrorBoundary-Xx3vyups.js">
+    <link rel="modulepreload" crossorigin href="./assets/alert-dialog-CYJZg0vV.js">
+    <link rel="modulepreload" crossorigin href="./assets/dialog-C-S4uQH4.js">
+    <link rel="modulepreload" crossorigin href="./assets/useDebounce-Dz48GAub.js">
+    <link rel="modulepreload" crossorigin href="./assets/numbers-BWXaNlZC.js">
+    <link rel="modulepreload" crossorigin href="./assets/SSRProvider-DrIPqn2D.js">
+    <link rel="modulepreload" crossorigin href="./assets/context-C5uPODSj.js">
+    <link rel="modulepreload" crossorigin href="./assets/useNumberFormatter-C1aNc7b4.js">
+    <link rel="modulepreload" crossorigin href="./assets/usePress-CuSksPzr.js">
+    <link rel="modulepreload" crossorigin href="./assets/input-fjIzfaON.js">
+    <link rel="modulepreload" crossorigin href="./assets/ImperativeModal-DD50EU1G.js">
+    <link rel="modulepreload" crossorigin href="./assets/cell-link-D4ddCDwe.js">
+    <link rel="modulepreload" crossorigin href="./assets/alert-BP5lLEUu.js">
+    <link rel="modulepreload" crossorigin href="./assets/links-9tVC0887.js">
+    <link rel="modulepreload" crossorigin href="./assets/state-BUWnJ0Ly.js">
+    <link rel="modulepreload" crossorigin href="./assets/MarimoErrorOutput-CBrjDxLd.js">
+    <link rel="modulepreload" crossorigin href="./assets/copy-CL0ql7QN.js">
+    <link rel="modulepreload" crossorigin href="./assets/copy-CGmj_xHa.js">
+    <link rel="modulepreload" crossorigin href="./assets/copy-icon-DyWZDAiU.js">
+    <link rel="modulepreload" crossorigin href="./assets/spinner-cyqSIlb0.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CSuUnJvL.js">
+    <link rel="modulepreload" crossorigin href="./assets/focus-BLLpcsff.js">
+    <link rel="modulepreload" crossorigin href="./assets/popover-CmnWYkoH.js">
+    <link rel="modulepreload" crossorigin href="./assets/useRunCells-Ds9oEET1.js">
+    <link rel="modulepreload" crossorigin href="./assets/mode-OgOLIWqz.js">
+    <link rel="modulepreload" crossorigin href="./assets/purify.es-B1k9qoU6.js">
+    <link rel="modulepreload" crossorigin href="./assets/RenderHTML-CDZ5aEc_.js">
+    <link rel="modulepreload" crossorigin href="./assets/table-NPSY8_Zm.js">
+    <link rel="modulepreload" crossorigin href="./assets/tabs-CWZFOtfb.js">
+    <link rel="modulepreload" crossorigin href="./assets/add-missing-import-CtAvQzRq.js">
+    <link rel="modulepreload" crossorigin href="./assets/useAsyncData-CWTnKpYp.js">
+    <link rel="modulepreload" crossorigin href="./assets/useIframeCapabilities-DeznJSW5.js">
+    <link rel="modulepreload" crossorigin href="./assets/LazyAnyLanguageCodeMirror-LOVWlBJF.js">
+    <link rel="modulepreload" crossorigin href="./assets/error-banner-BVpxvuDQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/formats-C_m3CfBz.js">
+    <link rel="modulepreload" crossorigin href="./assets/useTheme-DNzypnwR.js">
+    <link rel="modulepreload" crossorigin href="./assets/en-US-DZkKelDe.js">
+    <link rel="modulepreload" crossorigin href="./assets/isValid-CB2nX3F0.js">
+    <link rel="modulepreload" crossorigin href="./assets/maps-CcaFd04c.js">
+    <link rel="modulepreload" crossorigin href="./assets/shim-DZsTM49a.js">
+    <link rel="modulepreload" crossorigin href="./assets/download-Yhx6Ym5-.js">
+    <link rel="modulepreload" crossorigin href="./assets/extends-r-9mmG40.js">
+    <link rel="modulepreload" crossorigin href="./assets/emotion-is-prop-valid.esm-CvS1dbIX.js">
+    <link rel="modulepreload" crossorigin href="./assets/useDateFormatter-BQepJAoC.js">
+    <link rel="modulepreload" crossorigin href="./assets/katex-BWHK7JiN.js">
+    <link rel="modulepreload" crossorigin href="./assets/marked.esm-D2gFq9fv.js">
+    <link rel="modulepreload" crossorigin href="./assets/chunk-T7OEMACY-DmsJ7oRM.js">
+    <link rel="modulepreload" crossorigin href="./assets/range-CWPLRnRw.js">
+    <link rel="modulepreload" crossorigin href="./assets/table-BqDahwx2.js">
+    <link rel="modulepreload" crossorigin href="./assets/Output-DaxqEvBr.js">
+    <link rel="modulepreload" crossorigin href="./assets/name-cell-input-Czy9kSf0.js">
+    <link rel="modulepreload" crossorigin href="./assets/useHotkey-fEzjOJm_.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-C90uzGgn.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CXTCcHAx.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-yuFtFIvU.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-FxKIA4Su.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BTwRVGbc.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-Dk-ec10U.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-Bt-XL6sZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CO0hHVso.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-B_1rC47Z.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-Cav6n7Mt.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BilWanrC.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-Bs4awW3v.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-ByISUkN_.js">
+    <link rel="modulepreload" crossorigin href="./assets/apl-P0h8Mr-1.js">
+    <link rel="modulepreload" crossorigin href="./assets/asciiarmor-D32nrZfi.js">
+    <link rel="modulepreload" crossorigin href="./assets/asn1-BGWFqtof.js">
+    <link rel="modulepreload" crossorigin href="./assets/brainfuck-bRbTK_ul.js">
+    <link rel="modulepreload" crossorigin href="./assets/clike-CDpf5LdD.js">
+    <link rel="modulepreload" crossorigin href="./assets/clojure-BIaW7E1P.js">
+    <link rel="modulepreload" crossorigin href="./assets/cmake-Fdo8v8A2.js">
+    <link rel="modulepreload" crossorigin href="./assets/cobol-OYTcoAp0.js">
+    <link rel="modulepreload" crossorigin href="./assets/coffeescript-DnHAeBoz.js">
+    <link rel="modulepreload" crossorigin href="./assets/commonlisp-DZODvuDN.js">
+    <link rel="modulepreload" crossorigin href="./assets/crystal-ByGYU1ry.js">
+    <link rel="modulepreload" crossorigin href="./assets/css-DQy1ktIn.js">
+    <link rel="modulepreload" crossorigin href="./assets/cypher-BqzuHhct.js">
+    <link rel="modulepreload" crossorigin href="./assets/d-5Fj8y8Ro.js">
+    <link rel="modulepreload" crossorigin href="./assets/diff-K3UuOlLk.js">
+    <link rel="modulepreload" crossorigin href="./assets/dtd-COG0IeNI.js">
+    <link rel="modulepreload" crossorigin href="./assets/dylan-Dfhc0Kak.js">
+    <link rel="modulepreload" crossorigin href="./assets/ecl-BMslxTqn.js">
+    <link rel="modulepreload" crossorigin href="./assets/eiffel-DoFPZKgO.js">
+    <link rel="modulepreload" crossorigin href="./assets/elm-CWDHfGfn.js">
+    <link rel="modulepreload" crossorigin href="./assets/erlang-C0xdvudI.js">
+    <link rel="modulepreload" crossorigin href="./assets/simple-mode-Ccflbu9h.js">
+    <link rel="modulepreload" crossorigin href="./assets/factor-DEtwqCL8.js">
+    <link rel="modulepreload" crossorigin href="./assets/forth-A93hDrjr.js">
+    <link rel="modulepreload" crossorigin href="./assets/fortran-CuTjeCKb.js">
+    <link rel="modulepreload" crossorigin href="./assets/gas-CiyaCjl_.js">
+    <link rel="modulepreload" crossorigin href="./assets/gherkin-BcwByeby.js">
+    <link rel="modulepreload" crossorigin href="./assets/groovy-r2-fZFco.js">
+    <link rel="modulepreload" crossorigin href="./assets/haskell-7o_rdGTQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/haxe-DYRKW28o.js">
+    <link rel="modulepreload" crossorigin href="./assets/idl-lxzFEdlJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/javascript-BVerENn6.js">
+    <link rel="modulepreload" crossorigin href="./assets/julia-BKrwhn35.js">
+    <link rel="modulepreload" crossorigin href="./assets/livescript-DXZTF8eQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/lua-1kf1Kn_-.js">
+    <link rel="modulepreload" crossorigin href="./assets/mathematica-DbM7qeVx.js">
+    <link rel="modulepreload" crossorigin href="./assets/mbox-yeyE7jAy.js">
+    <link rel="modulepreload" crossorigin href="./assets/mirc-BUIfkQcx.js">
+    <link rel="modulepreload" crossorigin href="./assets/mllike-cuHPGaql.js">
+    <link rel="modulepreload" crossorigin href="./assets/modelica-DVVkMuX_.js">
+    <link rel="modulepreload" crossorigin href="./assets/mscgen-4Argcv2M.js">
+    <link rel="modulepreload" crossorigin href="./assets/mumps-BnAFQnrr.js">
+    <link rel="modulepreload" crossorigin href="./assets/nsis-BapZHEue.js">
+    <link rel="modulepreload" crossorigin href="./assets/ntriples-KcW691KM.js">
+    <link rel="modulepreload" crossorigin href="./assets/octave-aZeHY9oT.js">
+    <link rel="modulepreload" crossorigin href="./assets/oz-Cp3up0rm.js">
+    <link rel="modulepreload" crossorigin href="./assets/pascal-eBaSS2b_.js">
+    <link rel="modulepreload" crossorigin href="./assets/perl-DEhUvkqp.js">
+    <link rel="modulepreload" crossorigin href="./assets/pig-Bbx0-A3U.js">
+    <link rel="modulepreload" crossorigin href="./assets/powershell-C-a2xSWe.js">
+    <link rel="modulepreload" crossorigin href="./assets/properties-D4oZTSRw.js">
+    <link rel="modulepreload" crossorigin href="./assets/protobuf-vt_-BoIh.js">
+    <link rel="modulepreload" crossorigin href="./assets/pug-CuQCjsS0.js">
+    <link rel="modulepreload" crossorigin href="./assets/puppet-v_FxnHdD.js">
+    <link rel="modulepreload" crossorigin href="./assets/python-Ciz3nOoG.js">
+    <link rel="modulepreload" crossorigin href="./assets/q-BAMmJTXP.js">
+    <link rel="modulepreload" crossorigin href="./assets/r-BThezCV8.js">
+    <link rel="modulepreload" crossorigin href="./assets/rpm-DqZBhvGf.js">
+    <link rel="modulepreload" crossorigin href="./assets/ruby-COOWtg59.js">
+    <link rel="modulepreload" crossorigin href="./assets/sas-D7AOhztC.js">
+    <link rel="modulepreload" crossorigin href="./assets/scheme-CBocbbdR.js">
+    <link rel="modulepreload" crossorigin href="./assets/shell-lT1vcZaF.js">
+    <link rel="modulepreload" crossorigin href="./assets/sieve-Bp4wNuXd.js">
+    <link rel="modulepreload" crossorigin href="./assets/smalltalk-C8zenhWl.js">
+    <link rel="modulepreload" crossorigin href="./assets/sparql-Bfstq9Rh.js">
+    <link rel="modulepreload" crossorigin href="./assets/stylus-C2Em32WT.js">
+    <link rel="modulepreload" crossorigin href="./assets/swift-CQbdtQmS.js">
+    <link rel="modulepreload" crossorigin href="./assets/tcl-CgwjN-Du.js">
+    <link rel="modulepreload" crossorigin href="./assets/textile-CPuJdR_5.js">
+    <link rel="modulepreload" crossorigin href="./assets/toml-DLqKhfOq.js">
+    <link rel="modulepreload" crossorigin href="./assets/troff-BaD0cBMB.js">
+    <link rel="modulepreload" crossorigin href="./assets/ttcn-cfg-C9NOBlCe.js">
+    <link rel="modulepreload" crossorigin href="./assets/ttcn-DOB8C7GW.js">
+    <link rel="modulepreload" crossorigin href="./assets/turtle-_7wd09RB.js">
+    <link rel="modulepreload" crossorigin href="./assets/vb-E90VhI05.js">
+    <link rel="modulepreload" crossorigin href="./assets/vbscript-CtQr8UoL.js">
+    <link rel="modulepreload" crossorigin href="./assets/velocity-B4-NqC87.js">
+    <link rel="modulepreload" crossorigin href="./assets/verilog-CCpiILSH.js">
+    <link rel="modulepreload" crossorigin href="./assets/vhdl-CrGqTZyE.js">
+    <link rel="modulepreload" crossorigin href="./assets/webidl-Ct6MbsZC.js">
+    <link rel="modulepreload" crossorigin href="./assets/xquery-DNK7TlxO.js">
+    <link rel="modulepreload" crossorigin href="./assets/yacas-BK5XHzX2.js">
+    <link rel="modulepreload" crossorigin href="./assets/z80-DT8q_Ryr.js">
+    <link rel="modulepreload" crossorigin href="./assets/esm-hcUBDEjZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/objectWithoutPropertiesLoose-dfl_7i8r.js">
+    <link rel="modulepreload" crossorigin href="./assets/esm-DDxkZACy.js">
+    <link rel="modulepreload" crossorigin href="./assets/trash-DI_RMnlv.js">
+    <link rel="modulepreload" crossorigin href="./assets/ConsoleOutput-1UUGbXpT.js">
+    <link rel="modulepreload" crossorigin href="./assets/icons-CVbUY4lM.js">
+    <link rel="modulepreload" crossorigin href="./assets/blob-CIREuKO3.js">
+    <link rel="modulepreload" crossorigin href="./assets/add-cell-with-ai-CSoCSUxd.js">
+    <link rel="modulepreload" crossorigin href="./assets/chart-no-axes-column-Bji-_7ip.js">
+    <link rel="modulepreload" crossorigin href="./assets/square-function-DNygr9WL.js">
+    <link rel="modulepreload" crossorigin href="./assets/spec-BZnptJuy.js">
+    <link rel="modulepreload" crossorigin href="./assets/useInstallPackage-DCDc7NTf.js">
+    <link rel="modulepreload" crossorigin href="./assets/column-preview-DN61SPFU.js">
+    <link rel="modulepreload" crossorigin href="./assets/useAddCell-BrByzpGu.js">
+    <link rel="modulepreload" crossorigin href="./assets/toggle-DAkPAKX9.js">
+    <link rel="modulepreload" crossorigin href="./assets/api-2JaIsahG.js">
+    <link rel="modulepreload" crossorigin href="./assets/globals-eSrTJiES.js">
+    <link rel="modulepreload" crossorigin href="./assets/share-BCjx5a8M.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-CSLSra8C.js">
+    <link rel="modulepreload" crossorigin href="./assets/memoize-DN0TMY36.js">
+    <link rel="modulepreload" crossorigin href="./assets/_toKey-C5ccFCJm.js">
+    <link rel="modulepreload" crossorigin href="./assets/_baseSet-BwKym8Ma.js">
+    <link rel="modulepreload" crossorigin href="./assets/utilities.esm-CFYsyNzv.js">
+    <link rel="modulepreload" crossorigin href="./assets/floating-outline-Bk6kjZw5.js">
+    <link rel="modulepreload" crossorigin href="./assets/eye-off-CkynlJbW.js">
+    <link rel="modulepreload" crossorigin href="./assets/plus-CcDW_rEW.js">
+    <link rel="modulepreload" crossorigin href="./assets/readonly-python-code-mq6FZbVx.js">
+    <link rel="modulepreload" crossorigin href="./assets/file-video-camera-DxwR0TAX.js">
+    <link rel="modulepreload" crossorigin href="./assets/file-text-DYJz3QFG.js">
+    <link rel="modulepreload" crossorigin href="./assets/file-DdZ6Vgf6.js">
+    <link rel="modulepreload" crossorigin href="./assets/types-CKActxHf.js">
+    <link rel="modulepreload" crossorigin href="./assets/label-CzgZucd0.js">
+    <link rel="modulepreload" crossorigin href="./assets/textarea-d-UPtQ6q.js">
+    <link rel="modulepreload" crossorigin href="./assets/circle-x-72ItD0Ur.js">
+    <link rel="modulepreload" crossorigin href="./assets/refresh-ccw-BHxANXt5.js">
+    <link rel="modulepreload" crossorigin href="./assets/trash-2-DkyoQBeV.js">
+    <link rel="modulepreload" crossorigin href="./assets/form-DhU-C-zB.js">
+    <link rel="modulepreload" crossorigin href="./assets/field-fjEDxnj7.js">
+    <link rel="modulepreload" crossorigin href="./assets/switch-BskylHTJ.js">
+    <link rel="modulepreload" crossorigin href="./assets/useBoolean-BKHo47jI.js">
+    <link rel="modulepreload" crossorigin href="./assets/useDeepCompareMemoize-CMu624yo.js">
+    <link rel="modulepreload" crossorigin href="./assets/types-DBTQaHSP.js">
+    <link rel="modulepreload" crossorigin href="./assets/prop-types-8ppFGRBY.js">
+    <link rel="modulepreload" crossorigin href="./assets/es-BMRi-PYh.js">
+    <link rel="modulepreload" crossorigin href="./assets/VisuallyHidden-B6MGE2am.js">
+    <link rel="modulepreload" crossorigin href="./assets/_baseFlatten-CnCoQev7.js">
+    <link rel="modulepreload" crossorigin href="./assets/get-DaaGyK0L.js">
+    <link rel="modulepreload" crossorigin href="./assets/hasIn-Ddg4IE2d.js">
+    <link rel="modulepreload" crossorigin href="./assets/_basePickBy-CPlg9rol.js">
+    <link rel="modulepreload" crossorigin href="./assets/pick-DON_s7R5.js">
+    <link rel="modulepreload" crossorigin href="./assets/send-BBhGiLCG.js">
+    <link rel="modulepreload" crossorigin href="./assets/code-xml-fIuLXB6s.js">
+    <link rel="modulepreload" crossorigin href="./assets/download-CRVp7nwp.js">
+    <link rel="modulepreload" crossorigin href="./assets/globe-B7EKeryr.js">
+    <link rel="modulepreload" crossorigin href="./assets/refresh-cw-DHav_aX8.js">
+    <link rel="modulepreload" crossorigin href="./assets/settings-DCyJEp5F.js">
+    <link rel="modulepreload" crossorigin href="./assets/square-2ncKmcyv.js">
+    <link rel="modulepreload" crossorigin href="./assets/triangle-alert-CITCjWDo.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-x0pnLWWY.js">
+    <link rel="modulepreload" crossorigin href="./assets/bundle.esm-CBRGmh5t.js">
+    <link rel="stylesheet" crossorigin href="./assets/cells-wU8qigWB.css">
+    <link rel="stylesheet" crossorigin href="./assets/Output-DUep6sC9.css">
+    <link rel="stylesheet" crossorigin href="./assets/ConsoleOutput-BFFTcC5Y.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-7bO8TuDm.css">
+  <marimo-wasm hidden=""></marimo-wasm>
+    <script>
+        if (window.location.protocol === 'file:') {
+            alert('Warning: This file must be served by an HTTP server to function correctly.');
+        }
+    </script>
+    
+    <style>
+        #save-button {
+            display: none !important;
+        }
+        #filename-input {
+            display: none !important;
+        }
+    </style>
+    <marimo-code hidden="">import%20marimo%0A%0A__generated_with%20%3D%20%220.18.3%22%0Aapp%20%3D%20marimo.App(%0A%20%20%20%20width%3D%22medium%22%2C%0A%20%20%20%20app_title%3D%22Science4Performance%20%7C%20Heat%20Acclimation%20ROI%20Engine%22%2C%0A)%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%20Adapting%20to%20a%20Warmer%20World%3A%20The%20Physiological%20Adaptions%20of%20Heat%20Acclimation%0A%20%20%20%20%3Cblockquote%20cite%3D%22https%3A%2F%2Fwww.huxley.net%2Fbnw%2Ffour.html%22%3E%0A%20%20%20%20%20%20%20%20%3Cp%3E%0A%20%20%20%20%20%20%20%20%20%20Heat%20acclimation%20develops%20through%20frequent%20exposure%20to%20hot%20environmental%20conditions%2C%20which%20elicit%20responses%20that%20attenuate%20the%20negative%20effects%20of%20heat%20stress%0A%20%20%20%20%20%20%20%20%3Ccite%3E%3Ca%20href%3D%22https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F275954405_Adaptations_and_mechanisms_of_human_heat_acclimation_Applications_for_competitive_athletes_and_sports%22%3EP%C3%A9riad%20(2015)%3C%2Fa%3E%3C%2Fcite%3E%0A%20%20%20%20%20%20%20%20%3C%2Fp%3E%0A%20%20%20%20%20%20%20%20%3C%2Fblockquote%3E%0A%20%20%20%20Having%20considered%20the%20physics%20of%20thermoregulation%20and%20the%20body's%20acute%20responses%20to%20heat%2C%20it%20is%20natural%20to%20ask%20how%20athletes%20can%20adapt%20to%20maintain%20performance%20in%20hot%2C%20humid%20conditions.%20If%20you%20use%20a%20Garmin%20device%20to%20track%20your%20training%2C%20you%20might%20have%20occasionally%20noticed%20messages%20indicating%20your%20level%20of%20heat%20(or%20altitude)%20acclimation.%20While%20acclimatisation%20refers%20to%20longer%20term%20adaptation%20to%20changes%20in%20environmental%20conditions%2C%20such%20as%20moving%20from%20Scotland%20to%20the%20south%20of%20Spain%20or%20an%20elevated%20alpine%20village%2C%20**acclimation**%20describes%20physiological%20changes%20occurring%20over%2010%20to%2014%20days%2C%20typically%20induced%20by%20artificial%20exercise%20conditions%2C%20such%20as%20indoor%20heat%20training%20or%20an%20altitude%20camp.%3Cbr%3E%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%23%20Heat%20Training%20Protocol%0A%20%20%20%20The%20paradox%20of%20heat%20training%20is%20that%20you%20start%20by%20removing%20your%20greatest%20cooling%20asset%3A%20airspeed.%20Even%20at%20relatively%20low%20power%20of%20around%20150%20W%2C%20pedalling%20on%20an%20indoor%20turbo-trainer%20in%20a%20warm%20room%20without%20a%20fan%20fairly%20quickly%20induces%20an%20increase%20in%20core%20body%20temperature.%20Professional%20athletes%20typically%20follow%20a%20protocol%20aiming%20to%20raise%20core%20body%20temperature%20to%20%2438.5%5E%5Ccirc%5Ctext%7BC%7D%5Ctext%7B--%7D39.0%5E%5Ccirc%5Ctext%7BC%7D%24%20for%2060%20to%2090%20minutes%20a%20day.%20With%20the%20benefit%20of%20expert%20supervision%2C%20the%20target%20is%20to%20maintain%20a%20safe%2C%20elevated%20temperature.%20By%20carefulling%20controlling%20the%20ambient%20conditions%20and%20layers%20of%20clothing%2C%20athletes%20do%20not%20need%20to%20expend%20excessive%20energy%20generating%20high%20power.%3Cbr%3E%0A%20%20%20%20During%20a%2014-day%20heat%20acclimation%20block%2C%20physiological%20adaptations%20occur%20in%20sequence.%20The%20body%20prioritises%20fluid%20expansion%20to%20support%20cardiovascular%20blood%20flow.%20Then%20it%20recalibrates%20sweat%20regulation%20and%20the%20peripheral%20sweat%20response.%20The%20transformation%20is%20completed%20with%20cellular%20and%20metabolic%20reinforcement.%0A%20%20%20%20%23%23%20Increased%20Plasma%20Volume%20(days%201%20to%205)%0A%20%20%20%20Repeated%20heat%20stress%20triggers%20mechanisms%20to%20retain%20water%20and%20reduce%20the%20loss%20of%20sodium.%20These%20include%20the%20release%20of%20aldosterone%20and%20ADH%20(vasopressin)%20to%20retain%20water%20and%20albumin%20to%20draw%20the%20water%20into%20the%20bloodstream.%20This%20results%20in%20a%20%205-7%25%20increase%20in%20body%20water.%20Any%20disadvantages%20of%20higher%20body%20mass%20are%20outweighed%20by%20the%20benefits%20to%20thermoregulation%20and%20cardiovascular%20stability.%20Blood%20plasma%20levels%20rise%20by%204-15%25%2C%20resulting%20in%20a%20temporary%20decrease%20in%20haematocrit%20(concentration%20of%20red%20blood%20cells).%20This%20contrasts%20with%20the%20effect%20of%20altitude%20acclimation.%3Cbr%3E%0A%20%20%20%20The%20expansion%20of%20plasma%20volume%20alleviates%20the%20conflict%20of%20demand%20for%20blood%20to%20flow%20both%20to%20the%20muscles%20to%20do%20work%20and%20the%20skin%20for%20cooling.%20This%20helps%20stablise%20blood%20pressure%20and%20reduce%20the%20elevation%20of%20heart%20rate%20(cardiovascular%20drift).%0A%20%20%20%20%23%23%20Recalibration%20of%20the%20Sweat%20Thermostat%20(days%204%20to%206)%0A%20%20%20%20The%20brain's%20thermostat%20resides%20in%20the%20Preoptic%20Anterior%20Hypothalamus%20(POAH).%20The%20threshold%20for%20the%20central%20control%20of%20the%20sweat%20response%20falls%20by%200.3%C2%B0C%20to%200.5%C2%B0C%2C%20early%20in%20acclimation.%20Your%20cooling%20response%20kicks%20in%20earlier%20by%20starting%20to%20sweat%20at%20a%20slightly%20lower%20temperature.%0A%20%20%20%20%23%23%20Sweat%20Rate%20and%20Electrolyte%20Conservation%20(days%207%20to%2010)%0A%20%20%20%20At%20the%20level%20of%20the%20skin%2C%20not%20only%20does%20the%20sweat%20response%20start%20earlier%2C%20it%20also%20becomes%20more%20sensitive%2C%20producing%20a%20greater%20volume%20of%20sweat.%20This%20allows%20the%20you%20to%20keep%20cooler%20in%20hot%20weather.%3Cbr%3E%0A%20%20%20%20The%20sweat%20glands%20upregulate%20enzymes%20that%20reabsorb%20sodium%20before%20the%20sweat%20leaves%20the%20skin.%20Typical%20sodium%20concentration%20of%2040%20to%2060%20mmol%2FL%20declines%20to%2010%20to%2030%20mmol%2FL%20in%20the%20sweat%20of%20an%20acclimatised%20athete.%20Maintaining%20the%20osmolarity%20of%20electolytes%20in%20the%20blood%20delays%20the%20onset%20of%20fatigue.%0A%20%20%20%20%23%23%20Raised%20Heat%20Stress%20Proteins%20(days%2010%20to%2014)%0A%20%20%20%20Heat%20Stress%20Proteins%20(HSPs)%20are%20found%20in%20every%20cell%20of%20our%20bodies.%20In%20fact%20must%20have%20evolved%20early%20on%2C%20because%20they%20are%20present%20in%20near%20all%20living%20organisms%2C%20from%20bacteria%20to%20humans.%20HSPs%20play%20a%20vital%20protective%20role%2C%20binding%20to%20intra-celluar%20proteins%20that%20are%20at%20risk%20of%20unfolding%20and%20losing%20their%20function%20when%20overheated.%20Activation%20of%20HSPs%20triggers%20the%20release%20of%20Heat%20Stress%20Factor%201%2C%20which%20enters%20the%20nucleus%20with%20a%20message%20to%20produce%20more%20HSPs.%3Cbr%3E%0A%20%20%20%20This%20heat%20stress%20protection%20mechanism%20prevents%20disruption%20of%20ATP%20production%20in%20the%20mitochondria%2C%20allowing%20you%20to%20maintain%20high%20performance%20in%20hot%20conditions.%0A%20%20%20%20%23%23%20Thermal%20Power%0A%20%20%20%20Heat%20acclimation%20cannot%20change%20fundamental%20thermodynamics.%20However%2C%20by%20expanding%20blood%20volume%2C%20lowering%20the%20cooling%20response%2C%20diluting%20sweat%20and%20reinforcing%20celluar%20response%20you%20can%20ride%20more%20effectively%20in%20hotter%20weather.%20This%20is%20a%20simulation%20of%20how%20these%20adaptations%20evolve%20over%20a%2014%20day%20heat%20acclimation%20camp.%20It%20is%20callibrated%20to%20match%20the%20results%20in%20a%20paper%20by%20%20%3Ca%20href%3D%22https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F263514484_Effect_of_Heat_and_Heat_Acclimatization_on_Cycling_Time_Trial_Performance_and_Pacing%22%3E%20Racinais%20(2015)%3C%2Fa%3E%20about%20preparing%20for%20a%20time%20trial%20in%20Doha%2C%20which%20hosted%20the%20UCI%20World%20Championships%20in%202016.%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20import%20marimo%20as%20mo%0A%20%20%20%20import%20numpy%20as%20np%0A%20%20%20%20import%20pandas%20as%20pd%0A%20%20%20%20import%20plotly.graph_objects%20as%20go%0A%20%20%20%20from%20plotly.subplots%20import%20make_subplots%0A%20%20%20%20return%20go%2C%20make_subplots%2C%20mo%2C%20np%2C%20pd%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20%23%20CSS%20Injection%20for%20Mobile%20Responsiveness%20%26%20Touch%20Optimization%0A%20%20%20%20responsive_style%3Dmo.md(%22%22%22%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%2F*%20Force%20Marimo%20horizontal%20stacks%20to%20wrap%20gracefully%20on%20narrow%20viewports%20*%2F%0A%20%20%20%20div%5Bclass*%3D%22hstack%22%5D%20%7B%0A%20%20%20%20%20%20%20%20flex-wrap%3A%20wrap%20!important%3B%0A%20%20%20%20%20%20%20%20gap%3A%200.75rem%20!important%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20%2F*%20Prevent%20Markdown%20tables%20from%20causing%20body%20scroll%20overflow%20*%2F%0A%20%20%20%20table%20%7B%0A%20%20%20%20%20%20%20%20display%3A%20block%3B%0A%20%20%20%20%20%20%20%20overflow-x%3A%20auto%3B%0A%20%20%20%20%20%20%20%20white-space%3A%20nowrap%3B%0A%20%20%20%20%20%20%20%20max-width%3A%20100%25%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20%2F*%20Enlarge%20touch%20targets%20for%20range%20sliders%20on%20mobile%20screens%20*%2F%0A%20%20%20%20input%5Btype%3D%22range%22%5D%20%7B%0A%20%20%20%20%20%20%20%20padding%3A%208px%200%3B%0A%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%20(responsive_style%2C)%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20%23%20Header%20%26%20UI%20Controls%20Setup%0A%20%20%20%20days_slider%20%3D%20mo.ui.slider(%0A%20%20%20%20%20%20%20%20start%3D0%2C%20stop%3D14%2C%20step%3D1%2C%20value%3D14%2C%20label%3D%22Camp%20Duration%20(Days)%22%0A%20%20%20%20)%0A%20%20%20%20ftp_input%20%3D%20mo.ui.number(%0A%20%20%20%20%20%20%20%20start%3D200%2C%20stop%3D400%2C%20step%3D5%2C%20value%3D300%2C%20label%3D%22Baseline%20FTP%20(W)%22%0A%20%20%20%20)%0A%0A%20%20%20%20title_card%20%3D%20mo.md(%0A%20%20%20%20%20%20%20%20f%22%22%22%0A%20%20%20%20%20%20%20%20%3Cdiv%20style%3D%22text-align%3Acenter%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ch1%20style%3D%22font-size%3A28px%3B%20font-weight%3A800%3B%20margin%3A0%3B%22%3EHeat%20Acclimation%20ROI%20Simulator%3C%2Fh1%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cp%20style%3D%22margin%3A0%3B%20font-size%3A18px%3B%20color%3A%23374151%3B%22%3EPhysiological%20Adaptation%20%26amp%3B%20Reclaimed%20Power%20Model%3C%2Fp%3E%0A%20%20%20%20%20%20%20%20%20%20%3Chr%20style%3D%22margin-top%3A0.6rem%3B%20margin-bottom%3A0.8rem%3B%20border%3Anone%3B%20height%3A1px%3B%20background%3A%23E5E7EB%3B%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdiv%3E%0A%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20)%0A%20%20%20%20return%20days_slider%2C%20ftp_input%2C%20title_card%0A%0A%0A%40app.cell%0Adef%20_(np%2C%20pd)%3A%0A%20%20%20%20%23%20Physiological%20Model%20Domain%20Engine%0A%20%20%20%20def%20calculate_acclimation_state(%0A%20%20%20%20%20%20%20%20day%3A%20int%2C%0A%20%20%20%20%20%20%20%20baseline_ftp%3A%20float%2C%0A%20%20%20%20)%20-%3E%20dict%5Bstr%2C%20float%5D%3A%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20Models%20physiological%20adaptation%20kinetics%20and%20power%20preservation%20%0A%20%20%20%20%20%20%20%20during%20a%2014-day%20heat%20acclimation%20camp.%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20d%20%3D%20float(np.clip(day%2C%200%2C%2014))%0A%0A%20%20%20%20%20%20%20%20%23%201.%20Non-linear%20Adaptation%20Kinetics%0A%20%20%20%20%20%20%20%20%23%20Phase%201%3A%20Plasma%20Volume%20Expansion%20(Fast%20exponential%20decay%20curve%2C%20max%20%2B15%25)%0A%20%20%20%20%20%20%20%20plasma_vol_pct%20%3D%2015.0%20*%20(1.0%20-%20np.exp(-0.55%20*%20d%20))%0A%0A%20%20%20%20%20%20%20%20%23%20Phase%202%3A%20POAH%20Sweating%20Threshold%20Offset%20(Sigmoidal%20shift%2C%20max%20-0.45%C2%B0C)%0A%20%20%20%20%20%20%20%20poah_shift_c%20%3D%20-0.45%20%2F%20(1.0%20%2B%20np.exp(-0.85%20*%20(d%20-%204.5)%20))%0A%0A%20%20%20%20%20%20%20%20%23%20Phase%203%3A%20Sweat%20Sodium%20Retention%20(Delayed%20sigmoid%2C%20max%2045%25%20reduction)%0A%20%20%20%20%20%20%20%20sweat_na_reduction_pct%20%3D%2045.0%20%2F%20(1.0%20%2B%20np.exp(-0.90%20*%20(d%20-%207.5)%20))%0A%0A%20%20%20%20%20%20%20%20%23%20Phase%204%3A%20Heat%20Shock%20Protein%20(HSP70%2F90)%20Upregulation%20(Late%20sigmoid%2C%20max%20%2B2.5x%20fold)%0A%20%20%20%20%20%20%20%20hsp_fold_change%20%3D%201.0%20%2B%20(2.5%20%2F%20(1.0%20%2B%20np.exp(-0.75%20*%20(d%20-%2010.0)%20)))%0A%0A%20%20%20%20%20%20%20%20%23%20Performance%20effect%20based%20on%20Racinais%20https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F263514484_Effect_of_Heat_and_Heat_Acclimatization_on_Cycling_Time_Trial_Performance_and_Pacing%0A%20%20%20%20%20%20%20%20%23%202.%20Environmental%20Heat%20Stress%20Penalty%20Calculation%2016%25%20loss%20on%20day%200%20and%203.6%25%20loss%20on%20day%2014%0A%20%20%20%20%20%20%20%20unacclimated_penalty_pct%20%3D%200.16%20%0A%20%20%20%20%20%20%20%20acclimated_penalty_pct%20%3D%200.036%20%0A%0A%20%20%20%20%20%20%20%20%23%203.%20Mitigation%20Weightings%20(Contribution%20to%20total%20performance%20recovery)%0A%20%20%20%20%20%20%20%20w_cv%20%3D%20(plasma_vol_pct%20%2F%2015.0)%20*%200.35%20%20%20%20%20%20%20%20%20%20%23%2035%25%20CV%20stability%0A%20%20%20%20%20%20%20%20w_thermal%20%3D%20(abs(poah_shift_c)%20%2F%200.45)%20*%200.30%20%20%23%2030%25%20Thermoregulatory%20offset%0A%20%20%20%20%20%20%20%20w_cellular%20%3D%20((hsp_fold_change%20-%201.0)%20%2F%202.5)%20*%200.35%20%23%2035%25%20Cellular%20protection%0A%0A%20%20%20%20%20%20%20%20total_mitigation%20%3D%20w_cv%20%2B%20w_thermal%20%2B%20w_cellular%0A%0A%20%20%20%20%20%20%20%20%23%204.%20Power%20%26%20Hemodynamic%20Outputs%0A%20%20%20%20%20%20%20%20unacclimated_ftp%20%3D%20baseline_ftp%20*%20(1.0%20-%20unacclimated_penalty_pct%20)%0A%20%20%20%20%20%20%20%20acclimated_ftp%20%3D%20baseline_ftp%20*%20(1.0%20-%20acclimated_penalty_pct%20)%0A%20%20%20%20%20%20%20%20reclaimed_watts%20%3D%20(acclimated_ftp%20-%20unacclimated_ftp)%20*%20total_mitigation%0A%20%20%20%20%20%20%20%20cv_drift_rate%20%3D%2016.0%20*%20(1.0%20-%200.72%20*%20(plasma_vol_pct%20%2F%2015.0))%0A%0A%20%20%20%20%20%20%20%20return%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22day%22%3A%20d%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22plasma_vol_pct%22%3A%20plasma_vol_pct%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22poah_shift_c%22%3A%20poah_shift_c%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22sweat_na_reduction_pct%22%3A%20sweat_na_reduction_pct%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22hsp_fold_change%22%3A%20hsp_fold_change%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22cv_drift_rate%22%3A%20cv_drift_rate%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22unacclimated_ftp%22%3A%20unacclimated_ftp%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22acclimated_ftp%22%3A%20acclimated_ftp%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22reclaimed_watts%22%3A%20reclaimed_watts%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22net_penalty_pct%22%3A%20acclimated_penalty_pct%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20def%20generate_camp_dataset(%0A%20%20%20%20%20%20%20%20baseline_ftp%3A%20float%2C%0A%20%20%20%20)%20-%3E%20pd.DataFrame%3A%0A%20%20%20%20%20%20%20%20records%20%3D%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20calculate_acclimation_state(d%2C%20baseline_ftp)%0A%20%20%20%20%20%20%20%20%20%20%20%20for%20d%20in%20range(15)%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%20%20return%20pd.DataFrame(records)%0A%20%20%20%20return%20calculate_acclimation_state%2C%20generate_camp_dataset%0A%0A%0A%40app.cell%0Adef%20_(%0A%20%20%20%20calculate_acclimation_state%2C%0A%20%20%20%20days_slider%2C%0A%20%20%20%20ftp_input%2C%0A%20%20%20%20generate_camp_dataset%2C%0A)%3A%0A%20%20%20%20%23%20Reactive%20Model%20Computation%0A%20%20%20%20df_timeline%20%3D%20generate_camp_dataset(%0A%20%20%20%20%20%20%20%20ftp_input.value%2C%0A%20%20%20%20)%0A%0A%20%20%20%20current_state%20%3D%20calculate_acclimation_state(%0A%20%20%20%20%20%20%20%20days_slider.value%2C%0A%20%20%20%20%20%20%20%20ftp_input.value%2C%0A%20%20%20%20)%0A%20%20%20%20return%20current_state%2C%20df_timeline%0A%0A%0A%40app.cell%0Adef%20_(current_state%2C%20days_slider%2C%20ftp_input%2C%20mo)%3A%0A%20%20%20%20%23%20KPI%20Metric%20Card%20Display%20Layout%0A%20%20%20%20metrics_display%20%3D%20mo.md(%0A%20%20%20%20%20%20%20%20f%22%22%22%0A%20%20%20%20%20%20%20%20%7Bftp_input%7D%3Cbr%3E%0A%20%20%20%20%20%20%20%20%7Bdays_slider%7D%3Cbr%3E%0A%20%20%20%20%20%20%20%20%23%23%23%20%F0%9F%93%88%20Performance%20Metrics%20at%20Day%20%7Bdays_slider.value%7D%3Cbr%3E%0A%20%20%20%20%20%20%20%20%7C%20Parameter%20%7C%20Value%20%7C%20Physiological%20Meaning%20%7C%0A%20%20%20%20%20%20%20%20%7C%20%3A---%20%7C%20%3A---%20%7C%20%3A---%20%7C%0A%20%20%20%20%20%20%20%20%7C%20**Unacclimated%20FTP**%20%7C%20%3Cspan%20style%3D%22color%3A%232563eb%3B%20font-weight%3Abold%3B%22%3E%7Bcurrent_state%5B'unacclimated_ftp'%5D%3A.0f%7D%20W%3C%2Fspan%3E%20%7C%20FTP%20reduced%20dure%20to%20environment%20%7C%0A%20%20%20%20%20%20%20%20%7C%20**Reclaimed%20Power**%20%7C%20%3Cspan%20style%3D%22color%3A%232563eb%3B%20font-weight%3Abold%3B%22%3E%2B%7Bcurrent_state%5B'reclaimed_watts'%5D%3A.0f%7D%20W%3C%2Fspan%3E%20%7C%20Watts%20recovered%20from%20environmental%20penalty%20%7C%0A%20%20%20%20%20%20%20%20%7C%20**Effective%20FTP**%20%7C%20**%7Bcurrent_state%5B'reclaimed_watts'%5D%2B%20current_state%5B'unacclimated_ftp'%5D%3A.0f%7D%20W**%20%7C%20Available%20threshold%20power%20under%20race%20heat%20%7C%0A%20%20%20%20%20%20%20%20%7C%20**Cardiovascular%20Drift**%20%7C%20**%7Bcurrent_state%5B'cv_drift_rate'%5D%3A.1f%7D%20bpm%2Fhr**%20%7C%20Heart%20rate%20creep%20rate%20under%20sustained%20load%20%7C%0A%20%20%20%20%20%20%20%20%7C%20**Plasma%20Volume**%20%7C%20**%2B%7Bcurrent_state%5B'plasma_vol_pct'%5D%3A.1f%7D%25**%20%7C%20Hypervolemic%20fluid%20buffer%20extension%20%7C%0A%20%20%20%20%20%20%20%20%7C%20**Sweat%20Electrolyte%20Loss**%20%7C%20**-%7Bcurrent_state%5B'sweat_na_reduction_pct'%5D%3A.1f%7D%25**%20%7C%20Dilute%20sweating%20efficiency%20gain%20%7C%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20)%0A%20%20%20%20return%20(metrics_display%2C)%0A%0A%0A%40app.cell%0Adef%20_(days_slider%2C%20df_timeline%2C%20ftp_input%2C%20go%2C%20make_subplots%2C%20mo)%3A%0A%20%20%20%20%23%20Responsive%20Plotly%20Dashboard%0A%20%20%20%20fig%20%3D%20make_subplots(%0A%20%20%20%20%20%20%20%20rows%3D1%2C%0A%20%20%20%20%20%20%20%20cols%3D1%2C%0A%20%20%20%20%20%20%20%20shared_xaxes%3DTrue%2C%0A%20%20%20%20%20%20%20%20subplot_titles%3D(%0A%20%20%20%20%20%20%20%20%20%20%20%20%22Kinetics%20of%20Physiological%20Adaptations%20(%25%20Max)%22%2C%0A%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20%20%20%20%20vertical_spacing%3D0.10%2C%0A%20%20%20%20%20%20%20%20specs%3D%5B%5B%7B%22secondary_y%22%3A%20True%7D%5D%5D%0A%20%20%20%20)%0A%0A%20%20%20%20%23%20Subplot%201%3A%20Normalized%20Adaptation%20Curves%0A%20%20%20%20fig.add_trace(%0A%20%20%20%20%20%20%20%20go.Scatter(%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3Ddf_timeline%5B%22day%22%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3D(df_timeline%5B%22plasma_vol_pct%22%5D%20%2F%2015.0)%20*%20100%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20name%3D%22Plasma%20Vol%20Expansion%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20line%3Ddict(color%3D%22%232563EB%22%2C%20width%3D2.5)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20hovertemplate%3D%22Day%20%25%7Bx%7D%3Cbr%3EPlasma%20Volume%3A%20%25%7By%3A.1f%7D%25%20max%3Cextra%3E%3C%2Fextra%3E%22%0A%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20%20%20%20%20row%3D1%2C%20col%3D1%0A%20%20%20%20)%0A%0A%20%20%20%20fig.add_trace(%0A%20%20%20%20%20%20%20%20go.Scatter(%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3Ddf_timeline%5B%22day%22%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3D(df_timeline%5B%22poah_shift_c%22%5D.abs()%20%2F%200.45)%20*%20100%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20name%3D%22POAH%20Thermostat%20Reset%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20line%3Ddict(color%3D%22%23EA580C%22%2C%20width%3D2.5)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20hovertemplate%3D%22Day%20%25%7Bx%7D%3Cbr%3EPOAH%20Shift%3A%20%25%7By%3A.1f%7D%25%20max%3Cextra%3E%3C%2Fextra%3E%22%0A%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20%20%20%20%20row%3D1%2C%20col%3D1%0A%20%20%20%20)%0A%0A%20%20%20%20fig.add_trace(%0A%20%20%20%20%20%20%20%20go.Scatter(%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3Ddf_timeline%5B%22day%22%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3D(df_timeline%5B%22sweat_na_reduction_pct%22%5D%20%2F%2045.0)%20*%20100%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20name%3D%22Sweat%20Electrolyte%20Retention%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20line%3Ddict(color%3D%22%23059669%22%2C%20width%3D2.5)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20hovertemplate%3D%22Day%20%25%7Bx%7D%3Cbr%3ENa%2B%20Retention%3A%20%25%7By%3A.1f%7D%25%20max%3Cextra%3E%3C%2Fextra%3E%22%0A%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20%20%20%20%20row%3D1%2C%20col%3D1%0A%20%20%20%20)%0A%0A%20%20%20%20fig.add_trace(%0A%20%20%20%20%20%20%20%20go.Scatter(%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3Ddf_timeline%5B%22day%22%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3D((df_timeline%5B%22hsp_fold_change%22%5D%20-%201.0)%20%2F%202.5)%20*%20100%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20name%3D%22Cellular%20HSP%20Defense%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20line%3Ddict(color%3D%22%23DC2626%22%2C%20width%3D2.5)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20hovertemplate%3D%22Day%20%25%7Bx%7D%3Cbr%3EHSP%20Response%3A%20%25%7By%3A.1f%7D%25%20max%3Cextra%3E%3C%2Fextra%3E%22%0A%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20%20%20%20%20row%3D1%2C%20col%3D1%0A%20%20%20%20)%0A%0A%20%20%20%20%23%20Subplot%202%3A%20FTP%20Recovery%20Area%20Chart%0A%20%20%20%20fig.add_trace(%0A%20%20%20%20%20%20%20%20go.Scatter(%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3Ddf_timeline%5B%22day%22%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3Ddf_timeline%5B%22reclaimed_watts%22%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20name%3D%22Reclaimed%20Watts%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20line%3Ddict(color%3D%22%237C3AED%22%2C%20width%3D3)%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20fill%3D%22tozeroy%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20fillcolor%3D%22rgba(124%2C%2058%2C%20237%2C%200.08)%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20hovertemplate%3D%22Day%20%25%7Bx%7D%3Cbr%3EReclaimed%20Watts%3A%20%25%7By%3A.0f%7D%20W%3Cextra%3E%3C%2Fextra%3E%22%0A%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20%20%20%20%20row%3D1%2C%20col%3D1%2C%0A%20%20%20%20%20%20%20%20secondary_y%3DTrue%0A%20%20%20%20)%0A%0A%0A%20%20%20%20%23%20Dynamic%20Selected%20Day%20Indicator%20Marker%0A%20%20%20%20fig.add_vline(%0A%20%20%20%20%20%20%20%20x%3Ddays_slider.value%2C%0A%20%20%20%20%20%20%20%20line_width%3D1.5%2C%0A%20%20%20%20%20%20%20%20line_dash%3D%22dash%22%2C%0A%20%20%20%20%20%20%20%20line_color%3D%22%231E293B%22%2C%0A%20%20%20%20%20%20%20%20annotation_text%3Df%22Day%20%7Bdays_slider.value%7D%22%2C%0A%20%20%20%20%20%20%20%20annotation_position%3D%22top%20left%22%2C%0A%20%20%20%20)%0A%0A%20%20%20%20%23%20Mobile-Optimized%20Layout%20Styling%0A%20%20%20%20fig.update_layout(%0A%20%20%20%20%20%20%20%20template%3D%22plotly_white%22%2C%0A%20%20%20%20%20%20%20%20autosize%3DTrue%2C%0A%20%20%20%20%20%20%20%20height%3D500%2C%0A%20%20%20%20%20%20%20%20margin%3Ddict(l%3D12%2C%20r%3D12%2C%20t%3D35%2C%20b%3D80)%2C%0A%20%20%20%20%20%20%20%20hovermode%3D%22x%20unified%22%2C%0A%20%20%20%20%20%20%20%20legend%3Ddict(%0A%20%20%20%20%20%20%20%20%20%20%20%20orientation%3D%22h%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20yanchor%3D%22top%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20y%3D-0.18%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20xanchor%3D%22center%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20x%3D0.5%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20font%3Ddict(size%3D10)%0A%20%20%20%20%20%20%20%20)%2C%0A%20%20%20%20)%0A%20%20%20%20lost_watts%20%3D%20ftp_input.value-df_timeline%5B%22unacclimated_ftp%22%5D%5B0%5D%0A%20%20%20%20fig.update_yaxes(title_text%3D%22%25%20Max%22%2C%20range%3D%5B-5%2C%20105%5D%2C%20title_font%3Ddict(size%3D11)%2C%20tickfont%3Ddict(size%3D10)%2C%20row%3D1%2C%20col%3D1)%0A%20%20%20%20fig.update_yaxes(title_text%3Df%22Reclaimed%20Watts%20(W)%20out%20of%20%7Blost_watts%3A.0f%7D%20W%20lost%22%2C%20range%3D%5B0%2Clost_watts%5D%2Ctitle_font%3Ddict(size%3D11)%2C%20tickfont%3Ddict(size%3D10%2Ccolor%3D%22%231E293B%22)%2C%20secondary_y%3DTrue%2C%20row%3D1%2C%20col%3D1)%0A%20%20%20%20fig.update_xaxes(title_text%3D%22Days%20in%20Heat%20Camp%22%2C%20dtick%3D1%2C%20title_font%3Ddict(size%3D11)%2C%20tickfont%3Ddict(size%3D10)%2C%20row%3D1%2C%20col%3D1)%0A%0A%20%20%20%20chart_display%20%3D%20mo.ui.plotly(%0A%20%20%20%20%20%20%20%20fig%2C%0A%20%20%20%20%20%20%20%20config%3D%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22responsive%22%3A%20True%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22displayModeBar%22%3A%20False%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20)%0A%20%20%20%20return%20(chart_display%2C)%0A%0A%0A%40app.cell%0Adef%20_(chart_display%2C%20metrics_display%2C%20mo%2C%20responsive_style%2C%20title_card)%3A%0A%20%20%20%20%23%20Main%20Reactive%20UI%20Layout%20Assembly%0A%20%20%20%20mo.vstack(%5B%0A%20%20%20%20%20%20%20%20responsive_style%2C%0A%20%20%20%20%20%20%20%20title_card%2C%0A%20%20%20%20%20%20%20%20chart_display%2C%0A%20%20%20%20%20%20%20%20metrics_display%2C%0A%0A%20%20%20%20%5D)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20-%20The%20physiological%20adaptations%20are%20plotted%20on%20the%20left%20from%200%25%20to%20100%25.%0A%20%20%20%20-%20The%20purple%20line%20shows%20the%20performance%20impact%20in%20terms%20of%20reclaimed%20Watts%20on%20the%20right%20hand%20scale%0A%20%20%20%20-%20Set%20your%20baseline%20FTP%20and%20move%20the%20slider%20to%20see%20the%20effect%20of%20the%20heat%20acclimation%20camp%20over%20time%0A%20%20%20%20-%20In%20line%20with%20Racinais's%2C%20the%20model%20assumes%20that%2C%20unacclimated%20atheletes%20lose%2016%25%20FTP%20in%20conditions%20of%20over%20%2436%5E%5Ccirc%5Ctext%7BC%7D%24.%0A%20%20%20%20-%20Over%20the%20full%2014%20days%20they%20reclaim%20about%2087%25%20of%20this%20loss.%20Full%20FTP%20is%20not%20regained.%0A%20%20%20%20-%20The%20majority%20of%20the%20gain%20is%20acquired%20in%20the%20first%207%20days%20as%20the%20cardivascular%20and%20sweat%20processes%20adapt%0A%20%20%20%20-%20Further%20improvements%20are%20conferred%20by%20the%20elevation%20of%20Heat%20Stress%20Proteins%0A%20%20%20%20-%20On%20the%20positive%20side%2C%20air%20density%20falls%20as%20temperature%20rises.%20This%20reduces%20aerodynamic%20drag.%20In%20the%20Racinais%20paper%2C%20after%2014%20days%2C%20acclimated%20athletes%20were%20able%20to%20complete%20a%20time%20trial%20faster%20than%20in%20cooler%20conditions%2C%20in%20spite%20of%20producing%20lower%20power.%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20%23%23%20Technical%20Appendix%0A%20%20%20%20For%20those%20who%20want%20to%20dig%20deeper%2C%20I%20recommend%20excellent%20papers%20by%20%3Ca%20href%3D%22https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F275954405_Adaptations_and_mechanisms_of_human_heat_acclimation_Applications_for_competitive_athletes_and_sports%22%3EP%C3%A9riad%20(2015)%3C%2Fa%3E%20and%20%3Ca%20href%3D%22https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F263514484_Effect_of_Heat_and_Heat_Acclimatization_on_Cycling_Time_Trial_Performance_and_Pacing%22%3E%20Racinais%20(2015)%3C%2Fa%3E.%3Cbr%3E%0A%20%20%20%20%23%23%23%20Physiological%20adaptation%0A%20%20%20%20-%20Adaptation%20of%20blood%20plasma%20expansion%20is%20modelled%20with%20a%20capped%20exponential%20function.%0A%20%20%20%20-%20The%20other%20physiological%20changes%20are%20modelled%20with%20sigmoid%20functions.%0A%20%20%20%20%23%23%23%20Model%20fitting%20-%20Estimation%20and%20Validation%20of%20Watts%20lost%20and%20Watts%20reclaimed%20from%20Heat%20Acclimatisation.%0A%20%20%20%20-%20I%20estimated%20the%20underlying%20data%20used%20to%20produce%20the%20chart%20in%20Figure%201%20of%20%20%3Ca%20href%3D%22https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F263514484_Effect_of_Heat_and_Heat_Acclimatization_on_Cycling_Time_Trial_Performance_and_Pacing%22%3E%20Racinais%20(2015)%3C%2Fa%3E.%0A%20%20%20%20-%20I%20calculated%20average%20power%20and%20confirmed%20that%20there%20was%20a%2015.9%25%20loss%20of%20power%20for%20the%20unacclimated%20test%20versus%20baseline%20compared%20with%2016%25%20quoted%20in%20the%20text%0A%20%20%20%20-%20%20I%20calculated%20average%20power%20for%20day%207%20and%20day%2014%20in%20order%20to%20calibrate%20the%20Simulation%20in%20the%20main%20app.%0A%20%20%20%20%20%20%20Although%20more%20of%20the%20watts%20are%20regained%20in%20the%20first%207%20days%2C%20I%20found%20that%20a%20roughly%20equal%20weighting%20of%20the%20physiological%20adaptations%20matched%20the%20power%20improvements%20observed%20in%20the%20study%0A%20%20%20%20%20%20%20%20-%20Mitigation%20Weightings%20(Contribution%20to%20total%20performance%20recovery)%0A%20%20%20%20%20%20%20%20-%2035%25%20CV%20stability%0A%20%20%20%20%20%20%20%20-%2030%25%20Thermoregulatory%20offset%0A%20%20%20%20%20%20%20%20-%2035%25%20Cellular%20protection%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell(hide_code%3DTrue)%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%0A%20%20%20%20Source%20code%20for%20this%20project%20at%20https%3A%2F%2Fgithub.com%2Fscience4performance%2FRidingTheHeatwave3%0A%20%20%20%20%22%22%22)%0A%20%20%20%20return%0A%0A%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20app.run()%0A</marimo-code></head>
+  <body>
+    <div id="root"></div>
+    <!-- This is a portal for the data editor to render in -->
+    <div id="portal" data-testid="glide-portal" style="position: fixed; left: 0; top: 0; z-index: 9999"></div>
+    <script data-marimo="true">
+      window.__MARIMO_MOUNT_CONFIG__ = {
+            "filename": "notebook.py",
+            "mode": "read",
+            "version": "0.18.3",
+            "serverToken": "unused",
+            "config": {"ai": {"models": {"custom_models": [], "displayed_models": []}}, "completion": {"activate_on_typing": true, "copilot": false}, "diagnostics": {"sql_linter": true}, "display": {"cell_output": "below", "code_editor_font_size": 14, "dataframes": "rich", "default_table_max_columns": 50, "default_table_page_size": 10, "default_width": "medium", "reference_highlighting": false, "theme": "light"}, "formatting": {"line_length": 79}, "keymap": {"overrides": {}, "preset": "default"}, "language_servers": {"pylsp": {"enable_flake8": false, "enable_mypy": true, "enable_pydocstyle": false, "enable_pyflakes": false, "enable_pylint": false, "enable_ruff": true, "enabled": false}}, "mcp": {"mcpServers": {}, "presets": []}, "package_management": {"manager": "uv"}, "runtime": {"auto_instantiate": false, "auto_reload": "off", "default_sql_output": "auto", "on_cell_change": "autorun", "output_max_bytes": 8000000, "reactive_tests": true, "std_stream_max_bytes": 1000000, "watcher_on_save": "lazy"}, "save": {"autosave": "off", "autosave_delay": 1000, "format_on_save": false}, "server": {"browser": "default", "follow_symlink": false}, "snippets": {"custom_paths": [], "include_default_snippets": true}},
+            "configOverrides": {},
+            "appConfig": {"app_title": "Science4Performance | Heat Acclimation ROI Engine", "sql_output": "auto", "width": "medium"},
+            "view": {"showAppCode": false},
+            "notebook": null,
+            "session": null,
+            "runtimeConfig": null,
+        };
+    </script>
+  </body>
+</html>
